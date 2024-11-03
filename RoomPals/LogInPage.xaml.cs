@@ -1,4 +1,8 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,23 +16,18 @@ using System.Windows.Shapes;
 namespace RoomPals
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logika interakcji dla klasy LogInPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LogInPage : Page
     {
-        public MainWindow()
+        public LogInPage()
         {
             InitializeComponent();
         }
 
-        private void log_in_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new LogInPage());
-        }
-
-        private void sign_up_Click(object sender, RoutedEventArgs e)
-        {
-            
+            MessageBox.Show("Login button clicked!");
         }
     }
 }
