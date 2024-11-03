@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="RoomPals" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Background>
-        <ImageBrush ImageSource="C:/Users/PC/Downloads/mainpage1.png" Stretch="Fill"/>
+        <ImageBrush ImageSource="pack://application:,,,/Images/mainpage1.png" Stretch="Fill"/>
     </Window.Background>
 
     <Window.Resources>
@@ -37,8 +37,6 @@
     <!-- Frame for page navigation -->
     <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden">
         <Frame.Content>
-            <!-- Initial Page (can be a blank page or the main grid) -->
-            
             <Grid>
                 <!-- Define your button grid as before -->
                 <Grid.ColumnDefinitions>

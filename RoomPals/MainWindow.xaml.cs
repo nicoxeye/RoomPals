@@ -23,12 +23,16 @@ namespace RoomPals
 
         private void log_in_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new LogInPage());
+            LogInWindow logInWindow = new LogInWindow();
+            logInWindow.Show();
+            this.Close();
         }
 
         private void sign_up_Click(object sender, RoutedEventArgs e)
         {
-            
+            SignInWindow signInWindow = new SignInWindow();
+            signInWindow.Show();
+            this.Close();
         }
     }
 }

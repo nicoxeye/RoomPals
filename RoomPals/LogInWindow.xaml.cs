@@ -10,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace RoomPals
 {
     /// <summary>
-    /// Logika interakcji dla klasy LogInPage.xaml
+    /// Logika interakcji dla klasy LogInWindow.xaml
     /// </summary>
-    public partial class LogInPage : Page
+    public partial class LogInWindow : Window
     {
-        public LogInPage()
+        public LogInWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Login button clicked!");
         }
     }
 }
