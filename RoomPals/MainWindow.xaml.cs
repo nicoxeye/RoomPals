@@ -20,5 +20,19 @@ namespace RoomPals
         {
             InitializeComponent();
         }
+
+        private void Log_in_Click(object sender, RoutedEventArgs e)
+        {
+            LogInWindow logInWindow = new LogInWindow();
+            logInWindow.Show();
+            this.Close();
+        }
+
+        private void Sign_up_Click(object sender, RoutedEventArgs e)
+        {
+            SignInWindow signInWindow = new SignInWindow();
+            signInWindow.Show();
+            this.Close();
+        }
     }
 }
