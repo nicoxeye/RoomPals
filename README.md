@@ -1,2 +1,2 @@
 RoomPals app is a university project which helps you find a perfect roommate match!
-![Metodyki zwinne- SPRINT 1 dokumentacja](https://github.com/user-attachments/assets/d7df8113-f889-4502-8658-b4b6f0e4afb6)
+![Zrzut ekranu 2024-11-13 215222](https://github.com/user-attachments/assets/ca59d336-f9f7-4258-9607-582061ac02ab)
