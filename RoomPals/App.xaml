@@ -4,6 +4,25 @@
              xmlns:local="clr-namespace:RoomPals"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="RoundedTransparentButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="1" 
+                                CornerRadius="20">
+                            <!-- CornerRadius = Round button edges -->
+                            <ContentPresenter HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Application.Resources>
 </Application>
