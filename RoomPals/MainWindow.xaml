@@ -1,4 +1,4 @@
-﻿<Window x:Class="RoomPals.MainWindow"
+<Window x:Class="RoomPals.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,33 +6,10 @@
         xmlns:local="clr-namespace:RoomPals"
         mc:Ignorable="d"
         Title="RoomPals" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+   
     <Window.Background>
         <ImageBrush ImageSource="Images\mainpage.png" Stretch="Fill"/>
     </Window.Background>
-
-    <Window.Resources>
-        <!-- Transparent Button Style with Rounded Corners -->
-        <Style x:Key="RoundedTransparentButtonStyle" TargetType="Button">
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="BorderBrush" Value="Transparent"/>
-            <Setter Property="Foreground" Value="Black"/>
-            <Setter Property="Opacity" Value="1"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}" 
-                                BorderBrush="{TemplateBinding BorderBrush}" 
-                                BorderThickness="1" 
-                                CornerRadius="20">
-                            <!-- Adjust the CornerRadius as needed -->
-                            <ContentPresenter HorizontalAlignment="Center" 
-                                              VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Resources>
 
     <!-- Frame for page navigation -->
     <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden">
