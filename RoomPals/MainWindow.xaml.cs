@@ -19,6 +19,13 @@ namespace RoomPals
         public MainWindow()
         {
             InitializeComponent();
+
+            LoadDataFromJson();
+        }
+
+        private void LoadDataFromJson()
+        {
+
         }
 
         private void Log_in_Click(object sender, RoutedEventArgs e)
