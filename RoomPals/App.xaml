@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:RoomPals"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <!--Button Style-->
         <Style x:Key="RoundedTransparentButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderBrush" Value="Transparent"/>
@@ -24,5 +25,51 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <!--TextBox Style-->
+        <Style x:Key="RoundedTransparentTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Template">
+               <Setter.Value>
+                  <ControlTemplate TargetType="TextBox">
+                      <Border Background="{TemplateBinding Background}"
+                              BorderBrush="{TemplateBinding BorderBrush}"
+                              BorderThickness="1" 
+                              CornerRadius="20">
+                            <!-- CornerRadius = Round TextBox edges -->
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          HorizontalAlignment="Stretch"
+                                          VerticalAlignment="Stretch"/>
+                      </Border>
+                  </ControlTemplate>
+               </Setter.Value>
+            </Setter>
+        </Style>
+        <!--PasswordBox Style-->
+        <Style x:Key="RoundedTransparentPasswordBoxStyle" TargetType="PasswordBox">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="PasswordBox">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush = "{TemplateBinding BorderBrush}"
+                                BorderThickness="1"
+                                CornerRadius="20">
+                            <ScrollViewer x:Name="PART_ContentHost"
+                                           HorizontalAlignment="Stretch"
+                                           VerticalAlignment="Stretch"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
     </Application.Resources>
 </Application>
