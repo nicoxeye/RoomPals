@@ -84,7 +84,9 @@ namespace RoomPals
         }
         private void CreateAccount_Click(object sender, RoutedEventArgs e)
         {
-
+            CreateAccountWindow createAccountWindow = new CreateAccountWindow();
+            createAccountWindow.Show();
+            this.Hide();
         }
     }
 }
