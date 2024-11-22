@@ -23,5 +23,19 @@ namespace RoomPals
         {
             InitializeComponent();
         }
+
+        private void match_Click(object sender, RoutedEventArgs e)
+        {
+            ViewMatchesWindow viewMatchesWindow = new ViewMatchesWindow();
+            viewMatchesWindow.Show();
+            this.Close();
+        }
+
+        private void editprofile_Click(object sender, RoutedEventArgs e)
+        {
+            EditProfileWindow editProfileWindow = new EditProfileWindow();
+            editProfileWindow.Show();
+            this.Close();
+        }
     }
 }

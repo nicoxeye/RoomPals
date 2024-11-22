@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="LogInWindow" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Button Content="SKIP [TEMPORARY]" HorizontalAlignment="Center" Margin="0,733,0,0" VerticalAlignment="Top" Height="44" Width="172" Click="Button_Click"/>
+
     </Grid>
 </Window>

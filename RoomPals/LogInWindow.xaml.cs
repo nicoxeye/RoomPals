@@ -23,5 +23,12 @@ namespace RoomPals
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            StartWindow startWindow = new StartWindow();
+            startWindow.Show();
+            this.Close();
+        }
     }
 }
