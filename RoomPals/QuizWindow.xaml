@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:RoomPals"
         mc:Ignorable="d"
         Title="QuizWindow" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="pack://application:,,,/Images/quiz.png"/>
+    </Window.Background>
     <Grid>
         
     </Grid>
