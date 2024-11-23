@@ -23,5 +23,18 @@ namespace RoomPals
         {
             InitializeComponent();
         }
+
+
+        private void go_back_Click(object sender, RoutedEventArgs e)
+        {
+            StartWindow startWindow = new StartWindow();
+            startWindow.Show();
+            this.Close();
+        }
+
+        private void ConfirmButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
