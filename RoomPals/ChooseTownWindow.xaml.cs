@@ -19,6 +19,21 @@ namespace RoomPals
         public ChooseTownWindow()
         {
             InitializeComponent();
+            UserNameTextBlock.Text = "Example:)!"; //(temporary solution) here the code will enable to display
+                                                   //the previously collected username
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            //code that adds the town to the database of users
+        }
+
+        private void ConfirmYourChoiceButton_Click(object sender, RoutedEventArgs e)
+        {
+            ChooseYourUniversityWindow chooseYourUniversityWindow = new ChooseYourUniversityWindow();
+            chooseYourUniversityWindow.Show();
+            this.Hide();
+
         }
     }
 }
