@@ -15,21 +15,13 @@ using System.Windows.Shapes;
 namespace RoomPals
 {
     /// <summary>
-    /// Logika interakcji dla klasy ChooseYourUniversityWindow.xaml
+    /// Logika interakcji dla klasy ChooseFirstLanguage.xaml
     /// </summary>
-    public partial class ChooseYourUniversityWindow : Window
+    public partial class ChooseFirstLanguage : Window
     {
-        public ChooseYourUniversityWindow()
+        public ChooseFirstLanguage()
         {
             InitializeComponent();
-            UserNameTextBlock.Text = "Example:)!";
-        }
-
-        private void ConfirmYourChoiceButton_Click(object sender, RoutedEventArgs e)
-        {
-            ChooseFirstLanguage chooseFirstLanguage = new ChooseFirstLanguage();
-            chooseFirstLanguage.Show();
-            this.Hide();
         }
     }
 }
