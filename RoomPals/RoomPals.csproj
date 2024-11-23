@@ -25,7 +25,6 @@
     <Resource Include="Images\chooseuni.png" />
     <Resource Include="Images\mainpage.png" />
     <Resource Include="Images\registration.png" />
-    <Resource Include="Images\editProfile.png " />
     <Resource Include="Images\startPage.png" />
     <Resource Include="Images\startPage1.png" />
   </ItemGroup>
