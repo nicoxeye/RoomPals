@@ -5,8 +5,117 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RoomPals"
         mc:Ignorable="d"
-        Title="EditProfileWindow" Height="450" Width="800">
+        Title="EditProfileWindow" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Window.Background>
+        <ImageBrush ImageSource="Images\editProfile.png" Stretch="Fill"/>
+    </Window.Background>
+
     <Grid>
-        
+        <!-- Define your button grid as before -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Go Back Button -->
+        <Button Name="go_back"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" Height="20" Width="30" 
+                Style="{StaticResource RoundedTransparentButtonStyle}"
+                Margin="5,0,0,0"
+                Click="go_back_Click"/>
+
+        <TextBox Name="NameTextBox" 
+         Width="162" 
+         Height="21" 
+         HorizontalAlignment="Left" 
+         VerticalAlignment="Top" 
+         Margin="28,28,0,0" 
+         FontSize="15" 
+         Background="Transparent" 
+         BorderThickness="0" 
+         Foreground="White" 
+         Opacity="0.7" Grid.Column="3" Grid.ColumnSpan="4" Grid.Row="2"
+         />
+
+        <TextBox Name="LastNameTextBox" 
+         Width="162" 
+         Height="21" 
+         HorizontalAlignment="Left" 
+         VerticalAlignment="Top" 
+         Margin="28,98,0,0" 
+         FontSize="15" 
+         Background="Transparent" 
+         BorderThickness="0" 
+         Foreground="White" 
+         Opacity="0.7" Grid.Column="3" Grid.ColumnSpan="4" Grid.Row="2"
+         />
+
+        <TextBox Name="EmailTextBox" 
+         Width="162" 
+         Height="21" 
+         HorizontalAlignment="Left" 
+         VerticalAlignment="Center" 
+         Margin="28,0,0,0" 
+         FontSize="15" 
+         Background="Transparent" 
+         BorderThickness="0" 
+         Foreground="White" 
+         Opacity="0.7" Grid.Column="3" Grid.ColumnSpan="4" Grid.Row="3"
+         />
+
+        <TextBox Name="UsernameTextBox" 
+         Width="162" 
+         Height="21" 
+         HorizontalAlignment="Left" 
+         VerticalAlignment="Top" 
+         Margin="28,7,0,0" 
+         FontSize="15" 
+         Background="Transparent" 
+         BorderThickness="0" 
+         Foreground="White" 
+         Opacity="0.7" Grid.Column="3" Grid.ColumnSpan="4" Grid.Row="4"
+         />
+
+        <TextBox Name="PasswordTextBox" 
+         Width="162" 
+         Height="21" 
+         HorizontalAlignment="Left" 
+         VerticalAlignment="Top" 
+         Margin="28,77,0,0" 
+         FontSize="15" 
+         Background="Transparent" 
+         BorderThickness="0" 
+         Foreground="White" 
+         Opacity="0.7" Grid.Column="3" Grid.ColumnSpan="4" Grid.Row="4"
+         />
+
+        <TextBox Name="MajorTextBox" 
+         Width="162" 
+         Height="21" 
+         HorizontalAlignment="Left" 
+         VerticalAlignment="Top" 
+         Margin="28,30,0,0" 
+         FontSize="15" 
+         Background="Transparent" 
+         BorderThickness="0" 
+         Foreground="White" 
+         Opacity="0.7" Grid.Column="3" Grid.ColumnSpan="4" Grid.Row="5"
+         />
     </Grid>
 </Window>
