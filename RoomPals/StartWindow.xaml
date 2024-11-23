@@ -8,7 +8,7 @@
         Title="StartWindow" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
 
     <Window.Background>
-        <ImageBrush ImageSource="Images\startPage.png" Stretch="Fill"/>
+        <ImageBrush ImageSource="Images\startPage1.png" Stretch="Fill"/>
     </Window.Background>
 
     <Grid>
