@@ -10,18 +10,20 @@
 
   <ItemGroup>
     <None Remove="Images\basicinfo.png" />
-    <None Remove="Images\editProfile.png" />
+    <None Remove="Images\choosetown.png" />
     <None Remove="Images\mainpage.png" />
     <None Remove="Images\registration.png" />
     <None Remove="Images\startPage.png" />
     <None Remove="Images\startPage1.png" />
+    <None Remove="Images\editProfile.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Images\basicinfo.png" />
-    <Resource Include="Images\editProfile.png" />
+    <Resource Include="Images\choosetown.png" />
     <Resource Include="Images\mainpage.png" />
     <Resource Include="Images\registration.png" />
+    <Resource Include="Images\editProfile.png />
     <Resource Include="Images\startPage.png" />
     <Resource Include="Images\startPage1.png" />
   </ItemGroup>

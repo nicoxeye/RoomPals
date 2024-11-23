@@ -6,12 +6,75 @@
         xmlns:local="clr-namespace:RoomPals"
         mc:Ignorable="d"
         Title="ChooseTownWindow" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid>
-        <TextBlock Text="to be continued hehehe" 
-                   HorizontalAlignment="Center" 
-                   VerticalAlignment="Center" 
-                   FontSize="30"
-            />
+    <Window.Background>
+        <ImageBrush ImageSource="pack://application:,,,/Images/choosetown.png"/>
+    </Window.Background>
+    <Grid >
+        <TextBlock x:Name="UserNameTextBlock" 
+                           Text="" 
+                           Width="202" 
+                           Height="50" 
+                           HorizontalAlignment="Left" 
+                           VerticalAlignment="Top" 
+                           Margin="146,66,0,0" 
+                           FontSize="35" 
+                           Background="Transparent" 
+                           Foreground="White" 
+                           Opacity="0.85" RenderTransformOrigin="0.501,0.527"
+                         />
 
+        <StackPanel Orientation="Vertical" Margin="299,292,55,168">
+            <RadioButton Content="" 
+                         Margin="0,0,0,50"
+                         >
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+
+            <RadioButton Content="" 
+                         Margin="0,0,0,50"
+                         >
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+
+            <RadioButton Content="" 
+             Margin="0,0,0,50">
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+
+            <RadioButton Content="" 
+             Margin="0,0,0,50">
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+
+            <RadioButton Content="" 
+             Margin="0,0,0,50">
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+
+            <RadioButton Content="" 
+             Margin="0,0,0,50">
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+        </StackPanel>
+
+
+        <Button Name="ConfirmYourChoiceButton" 
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Top" Height="52" Width="302" 
+                        Style="{StaticResource RoundedTransparentButtonStyle}" 
+                        Margin="0,687,0,0"
+                        Click="ConfirmYourChoiceButton_Click" />
     </Grid>
 </Window>
