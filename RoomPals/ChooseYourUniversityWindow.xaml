@@ -5,8 +5,77 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RoomPals"
         mc:Ignorable="d"
-        Title="ChooseYourUniversityWindow" Height="450" Width="800">
+        Title="ChooseYourUniversityWindow" Height="852" Width="393" ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="pack://application:,,,/Images/chooseuni.png"/>
+    </Window.Background>
     <Grid>
-        
+        <TextBlock x:Name="UserNameTextBlock" 
+                           Text="" 
+                           Width="202" 
+                           Height="50" 
+                           FontFamily="Century Gothic"
+                           HorizontalAlignment="Left" 
+                           VerticalAlignment="Top" 
+                           Margin="146,66,0,0" 
+                           FontSize="35" 
+                           Background="Transparent" 
+                           Foreground="White" 
+                           Opacity="0.85" RenderTransformOrigin="0.501,0.527"
+                         />
+
+        <StackPanel Orientation="Vertical" Margin="322,275,32,185">
+            <RadioButton Content="" 
+                         Margin="0,0,0,50"
+                         >
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+
+            <RadioButton Content="" 
+                         Margin="0,0,0,50"
+                         >
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+
+            <RadioButton Content="" 
+             Margin="0,0,0,50">
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+
+            <RadioButton Content="" 
+             Margin="0,0,0,50">
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+
+            <RadioButton Content="" 
+             Margin="0,0,0,50">
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+
+            <RadioButton Content="" 
+             Margin="0,0,0,50">
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+        </StackPanel>
+
+        <Button Name="ConfirmYourChoiceButton" 
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Top" Height="52" Width="302" 
+                        Style="{StaticResource RoundedTransparentButtonStyle}" 
+                        Margin="0,687,0,0"
+                        Click="ConfirmYourChoiceButton_Click" />
     </Grid>
 </Window>
