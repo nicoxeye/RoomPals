@@ -22,6 +22,7 @@ namespace RoomPals
         public ChooseFirstLanguage()
         {
             InitializeComponent();
+            UserNameTextBlock.Text = "Example:)!";
         }
 
         private void ConfirmYourChoiceButton_Click(object sender, RoutedEventArgs e)
