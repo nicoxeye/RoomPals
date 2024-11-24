@@ -10,6 +10,69 @@
         <ImageBrush ImageSource="pack://application:,,,/Images/quiz.png"/>
     </Window.Background>
     <Grid>
-        
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" 
+            VerticalAlignment="Top" Margin="52,199,0,0" Width="372">
+            <RadioButton Content="" GroupName="NightOrDay" Width="243" Height="20" >
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="2.5" ScaleY="2.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+            <RadioButton Content="" GroupName="NightOrDay" Width="20" Height="20">
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="2.5" ScaleY="2.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" 
+    VerticalAlignment="Top" Margin="52,331,0,0" Width="372">
+            <RadioButton Content="" GroupName="DogOrCat" Width="243" Height="20" >
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="2.5" ScaleY="2.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+            <RadioButton Content="" GroupName="DogOrCat" Width="20" Height="20">
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="2.5" ScaleY="2.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" Margin="49,454,0,0" Width="372">
+            <RadioButton Content="" GroupName="PartyOrBook" Width="243" Height="20" >
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="2.5" ScaleY="2.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+            <RadioButton Content="" GroupName="PartyOrBook" Width="20" Height="20">
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="2.5" ScaleY="2.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" 
+             VerticalAlignment="Top" Margin="49,589,0,0" Width="372">
+            <RadioButton Content="" GroupName="ActiveOrPassive" Width="243" Height="20" >
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="2.5" ScaleY="2.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+            <RadioButton Content="" GroupName="ActiveOrPassive" Width="20" Height="20">
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="2.5" ScaleY="2.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+        </StackPanel>
+
+        <Button Name="ConfirmYourChoiceButton" 
+                        HorizontalAlignment="Left"  
+                        VerticalAlignment="Top" Height="52" Width="137" 
+                        Style="{StaticResource RoundedTransparentButtonStyle}" 
+                        Margin="139,704,0,0"
+                        Click="ConfirmYourChoiceButton_Click" />
+
     </Grid>
 </Window>
