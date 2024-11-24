@@ -52,7 +52,7 @@
         HorizontalAlignment="Left" Grid.Row="3" 
         VerticalAlignment="Top" Height="144" Width="162" 
         Style="{StaticResource RoundedTransparentButtonStyle}" 
-        Margin="27,51,0,0" Grid.ColumnSpan="3" Grid.RowSpan="2"
+        Margin="27,51,0,0" Grid.ColumnSpan="3" Grid.RowSpan="2" Click="quiz_Click"
         />
 
         <!-- EditProfile Button -->

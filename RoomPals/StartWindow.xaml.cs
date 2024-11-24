@@ -37,5 +37,13 @@ namespace RoomPals
             editProfileWindow.Show();
             this.Hide();
         }
+
+        private void quiz_Click(object sender, RoutedEventArgs e)
+        {
+            QuizChangeWindow quizChangeWindow = new QuizChangeWindow();
+            quizChangeWindow.Show();
+            this.Hide();
+
+        }
     }
 }
