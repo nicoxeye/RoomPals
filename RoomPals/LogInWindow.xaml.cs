@@ -30,5 +30,40 @@ namespace RoomPals
             startWindow.Show();
             this.Close();
         }
+
+        private void UsernameButton_Click(object sender, RoutedEventArgs e)
+        {
+            UsernameButton.Visibility = Visibility.Collapsed;
+            UsernameTextBox.Visibility = Visibility.Visible;
+            UsernameTextBox.Focus();
+        }
+
+        private void UsernameTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                PasswordButton_Click(sender, e);
+            }
+        }
+
+        private void PasswordButton_Click(object sender, RoutedEventArgs e)
+        {
+            PasswordButton.Visibility = Visibility.Collapsed;
+            PasswordBox.Visibility = Visibility.Visible;
+            PasswordBox.Focus();
+        }
+
+        private void PasswordBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                LoginButton_Click(sender, e);
+            }
+        }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

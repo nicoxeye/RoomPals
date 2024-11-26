@@ -61,7 +61,7 @@
                         Grid.ColumnSpan="4"
                         Style="{StaticResource RoundedTransparentButtonStyle}" 
                         Grid.RowSpan="2"/>
-
+                
                 <TextBox Name="UsernameTextBox" 
                          Grid.Row="3"
                          Grid.Column="2"
