@@ -114,7 +114,7 @@ namespace RoomPals
 
             Student newStudent = new Student(enteredEmail, enteredUsername, enteredPassword);
 
-            // dokoncze po treningu :3
+            //not finished yet
 
             MessageBox.Show("Account has been successfully created!");
 
