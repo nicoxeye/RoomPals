@@ -40,10 +40,12 @@
                               BorderThickness="1" 
                               CornerRadius="20">
                             <!-- CornerRadius = Round TextBox edges -->
-                            <ScrollViewer x:Name="PART_ContentHost" 
-                                          HorizontalAlignment="Stretch"
-                                          VerticalAlignment="Stretch"/>
-                      </Border>
+                            <!-- PART_ContentHost to miejsce, w którym wyświetlany i edytowany jest tekst -->
+                            <ScrollViewer x:Name="PART_ContentHost"
+                                          Focusable="False"
+                                          HorizontalScrollBarVisibility="Hidden" 
+                                          VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
                   </ControlTemplate>
                </Setter.Value>
             </Setter>
@@ -59,12 +61,14 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="PasswordBox">
                         <Border Background="{TemplateBinding Background}"
-                                BorderBrush = "{TemplateBinding BorderBrush}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="1"
                                 CornerRadius="20">
+                            <!-- PART_ContentHost to miejsce, w którym wyświetlany i edytowany jest tekst -->
                             <ScrollViewer x:Name="PART_ContentHost"
-                                           HorizontalAlignment="Stretch"
-                                           VerticalAlignment="Stretch"/>
+                                          Focusable="False"
+                                          HorizontalScrollBarVisibility="Hidden" 
+                                          VerticalScrollBarVisibility="Hidden"/>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>

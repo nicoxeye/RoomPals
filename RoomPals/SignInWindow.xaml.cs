@@ -15,25 +15,18 @@ namespace RoomPals
 
         private void Email_Click(object sender, RoutedEventArgs e)
         {
-            if (EmailTextBox.Visibility == Visibility.Collapsed)
+            if (string.IsNullOrWhiteSpace(EmailTextBox.Text))
             {
-                EmailTextBox.Visibility = Visibility.Visible;
+                // Jeśli TextBox jest pusty, przełącz widoczność
+                EmailTextBox.Visibility = EmailTextBox.Visibility == Visibility.Collapsed
+                    ? Visibility.Visible
+                    : Visibility.Collapsed;
             }
             else
             {
-                EmailTextBox.Visibility = Visibility.Collapsed;
+                // Jeśli TextBox ma tekst, to pozostaw go Visible
+                EmailTextBox.Visibility = Visibility.Visible;
             }
-            ////sprawdzenie:
-            //if (EmailTextBox.Visibility == Visibility.Collapsed)
-            //{
-            //    EmailTextBox.Visibility = Visibility.Visible;
-            //    MessageBox.Show("TextBox is now visible."); // Debug: sprawdzenie
-            //}
-            //else
-            //{
-            //    EmailTextBox.Visibility = Visibility.Collapsed;
-            //    MessageBox.Show("TextBox is now collapsed."); // Debug: sprawdzenie
-            //}
 
         }
         private void EmailTextBoxKeyDown(object sender, KeyEventArgs e)
@@ -42,7 +35,6 @@ namespace RoomPals
             {
                 string enteredEmail = EmailTextBox.Text;
                 MessageBox.Show(enteredEmail);
-                // EmailTextBox.Visibility = Visibility.Collapsed;
 
                 this.Focus();
                 
@@ -51,35 +43,79 @@ namespace RoomPals
         }
         private void Username_Click(object sender, RoutedEventArgs e)
         {
-            if (UsernameTextBox.Visibility == Visibility.Collapsed)
+            if (string.IsNullOrWhiteSpace(UsernameTextBox.Text))
             {
-                UsernameTextBox.Visibility = Visibility.Visible;
+                // Jeśli TextBox jest pusty, przełącz widoczność
+                UsernameTextBox.Visibility = UsernameTextBox.Visibility == Visibility.Collapsed
+                    ? Visibility.Visible
+                    : Visibility.Collapsed;
             }
             else
             {
-                UsernameTextBox.Visibility = Visibility.Collapsed;
+                // Jeśli TextBox ma tekst, to pozostaw go Visible
+                UsernameTextBox.Visibility = Visibility.Visible;
+            }
+        }
+        
+        private void UsernameTextBoxKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                string enteredUsername = UsernameTextBox.Text;
+                MessageBox.Show(enteredUsername); //tego nie musi tu byc jbc, tylko sprawdzam
+
+                this.Focus();
+
             }
         }
         private void Password_Click(object sender, RoutedEventArgs e)
         {
-            if (PasswordBox.Visibility == Visibility.Collapsed)
+            if (string.IsNullOrWhiteSpace(PasswordBox.Password))
             {
-                PasswordBox.Visibility = Visibility.Visible;
+                // Jeśli PasswordBox jest pusty, przełącz widoczność
+                PasswordBox.Visibility = PasswordBox.Visibility == Visibility.Collapsed
+                    ? Visibility.Visible
+                    : Visibility.Collapsed;
             }
             else
             {
-                PasswordBox.Visibility = Visibility.Collapsed;
+                // Jeśli PasswordBox ma tekst, to pozostaw go Visible
+                PasswordBox.Visibility = Visibility.Visible;
+            }
+        }
+        private void PasswordBoxKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                string enteredPassword = PasswordBox.Password;
+
+                this.Focus();
+
             }
         }
         private void RepeatPassword_Click(object sender, RoutedEventArgs e)
         {
-            if (RepeatPasswordBox.Visibility == Visibility.Collapsed)
+            if (string.IsNullOrWhiteSpace(RepeatPasswordBox.Password))
             {
-                RepeatPasswordBox.Visibility = Visibility.Visible;
+                // Jeśli PasswordBox jest pusty, przełącz widoczność
+                RepeatPasswordBox.Visibility = RepeatPasswordBox.Visibility == Visibility.Collapsed
+                    ? Visibility.Visible
+                    : Visibility.Collapsed;
             }
             else
             {
-                RepeatPasswordBox.Visibility= Visibility.Collapsed;
+                // Jeśli PasswordBox ma tekst, to pozostaw go Visible
+                PasswordBox.Visibility = Visibility.Visible;
+            }
+        }
+        private void RepeatPasswordBoxKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                string repeatedPassword = RepeatPasswordBox.Password;
+
+                this.Focus();
+
             }
         }
         private void CreateAccount_Click(object sender, RoutedEventArgs e)
