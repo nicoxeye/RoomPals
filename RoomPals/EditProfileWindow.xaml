@@ -8,7 +8,7 @@
         Title="EditProfileWindow" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
 
     <Window.Background>
-        <ImageBrush ImageSource="Images\editProfile.png" Stretch="Fill"/>
+        <ImageBrush ImageSource="Images\editProfile1.png" Stretch="Fill"/>
     </Window.Background>
 
     <Grid>
