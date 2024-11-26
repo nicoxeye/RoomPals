@@ -23,5 +23,13 @@ namespace RoomPals
         {
             InitializeComponent();
         }
+
+        private void ConfirmYourChoiceButton_Click(object sender, RoutedEventArgs e)
+        {
+            LogInWindow logInWindow = new LogInWindow();
+            logInWindow.Show();
+            this.Close();
+        }
+
     }
 }

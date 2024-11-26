@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace RoomPals
 {
     /// <summary>
-    /// Logika interakcji dla klasy ChooseFirstLanguage.xaml
+    /// Logika interakcji dla klasy ChooseSecondLanguage.xaml
     /// </summary>
-    public partial class ChooseFirstLanguage : Window
+    public partial class ChooseSecondLanguage : Window
     {
-        public ChooseFirstLanguage()
+        public ChooseSecondLanguage()
         {
             InitializeComponent();
             UserNameTextBlock.Text = "Example:)!";
@@ -27,9 +27,9 @@ namespace RoomPals
 
         private void ConfirmYourChoiceButton_Click(object sender, RoutedEventArgs e)
         {
-            ChooseSecondLanguage chooseSecondLanguage = new ChooseSecondLanguage();
-            chooseSecondLanguage.Show();
-            this.Hide();
+            QuizWindow quizWindow = new QuizWindow();
+            quizWindow.Show();
+            this.Close();
         }
     }
 }
