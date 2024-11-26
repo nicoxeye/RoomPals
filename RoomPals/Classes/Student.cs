@@ -35,6 +35,26 @@ namespace RoomPals.Classes
         string pattern_email = "@^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$";
         string pattern_password = "@^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d).{8,16}$";  //requirements: password must contain: min 1 uppercase letter, min 1 lowercase letter, min 1 digit 
 
+
+        // Constructor to initialize student object (only basic info required for sign up)
+
+        public Student(string email, string username , string password)
+        {
+            if (!Regex.IsMatch(email, pattern_email))
+            {
+                throw new ArgumentException("Incorrect email format");
+            }
+            Email = email;
+
+            Username = username;
+
+            if (!Regex.IsMatch(password, pattern_password))
+            {
+                throw new Exception("Incorrect password format");
+            }
+            Password = password;
+        }
+
         // Constructor to initialize the student object
         public Student(string name, string surname, int age, DateTime birthDate, string major, string sex,
                       string nightOrDay, string dogOrCat, string partyOrBook, string activeOrPassive,
@@ -64,8 +84,9 @@ namespace RoomPals.Classes
             Password = password;
         }
 
-        // Method to authenticate user
-        public bool Authenticate(string username, string password)
+
+       // Method to authenticate user
+            public bool Authenticate(string username, string password)
         {
             return Username == username && Password == password;
         }

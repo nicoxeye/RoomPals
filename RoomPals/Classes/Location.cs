@@ -32,5 +32,7 @@ namespace RoomPals.Classes
             street = "Unknown";
             street_number = 0;
         }
+
+        public Location() { } // needed in some cases when creating new student object (e.g. sign up)
     }
 }
