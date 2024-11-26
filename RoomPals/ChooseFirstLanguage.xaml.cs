@@ -27,9 +27,22 @@ namespace RoomPals
 
         private void ConfirmYourChoiceButton_Click(object sender, RoutedEventArgs e)
         {
+           
+        }
+
+        private void NextButton_Click(object sender, RoutedEventArgs e)
+        {
             ChooseSecondLanguage chooseSecondLanguage = new ChooseSecondLanguage();
             chooseSecondLanguage.Show();
-            this.Hide();
+            this.Close();
+
+        }
+
+        private void go_back_Click(object sender, RoutedEventArgs e)
+        {
+            StartWindow startWindow = new StartWindow();
+            startWindow.Show();
+            this.Close();
         }
     }
 }

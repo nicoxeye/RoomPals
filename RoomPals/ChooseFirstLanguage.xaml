@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="ChooseFirstLanguage" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Background>
-        <ImageBrush ImageSource="pack://application:,,,/Images/chooselan1.png"/>
+        <ImageBrush ImageSource="pack://application:,,,/Images/chooselan1_1.png"/>
     </Window.Background>
     <Grid>
         <TextBlock x:Name="UserNameTextBlock" 
@@ -72,11 +72,28 @@
 
 
         <Button Name="ConfirmYourChoiceButton" 
-                        HorizontalAlignment="Center" 
-                        VerticalAlignment="Top" Height="52" Width="302" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" Height="52" Width="147" 
+                Style="{StaticResource RoundedTransparentButtonStyle}" 
+                Margin="36,696,0,0"
+                Click="ConfirmYourChoiceButton_Click" />
+
+        <Button Name="NextButton" 
+                        HorizontalAlignment="Left" 
+                        VerticalAlignment="Top" Height="52" Width="147" 
                         Style="{StaticResource RoundedTransparentButtonStyle}" 
-                        Margin="0,687,0,0"
-                        Click="ConfirmYourChoiceButton_Click" />
+                        Margin="212,696,0,0"
+                        Click="NextButton_Click" />
+
+        <!-- Go Back Button -->
+        <Button Name="go_back"
+        HorizontalAlignment="Left" 
+        VerticalAlignment="Top" Height="20" Width="30" 
+        Style="{StaticResource RoundedTransparentButtonStyle}"
+        Margin="5,0,0,0"
+        Click="go_back_Click"/>
+
+
 
     </Grid>
 </Window>

@@ -11,9 +11,13 @@
   <ItemGroup>
     <None Remove="Images\basicinfo.png" />
     <None Remove="Images\chooselan1.png" />
+    <None Remove="Images\chooselan1_1.png" />
     <None Remove="Images\chooselan2.png" />
+    <None Remove="Images\chooselan2_2.png" />
     <None Remove="Images\choosetown.png" />
+    <None Remove="Images\choosetown1.png" />
     <None Remove="Images\chooseuni.png" />
+    <None Remove="Images\chooseuni1.png" />
     <None Remove="Images\editProfile1.png" />
     <None Remove="Images\mainpage.png" />
     <None Remove="Images\quiz.png" />
@@ -26,9 +30,13 @@
   <ItemGroup>
     <Resource Include="Images\basicinfo.png" />
     <Resource Include="Images\chooselan1.png" />
+    <Resource Include="Images\chooselan1_1.png" />
     <Resource Include="Images\chooselan2.png" />
+    <Resource Include="Images\chooselan2_2.png" />
     <Resource Include="Images\choosetown.png" />
+    <Resource Include="Images\choosetown1.png" />
     <Resource Include="Images\chooseuni.png" />
+    <Resource Include="Images\chooseuni1.png" />
     <Resource Include="Images\editProfile1.png" />
     <Resource Include="Images\mainpage.png" />
     <Resource Include="Images\quiz.png" />

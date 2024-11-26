@@ -30,10 +30,23 @@ namespace RoomPals
 
         private void ConfirmYourChoiceButton_Click(object sender, RoutedEventArgs e)
         {
+
+
+        }
+
+        private void go_back_Click(object sender, RoutedEventArgs e)
+        {
+            // this will be blocked if the user is in the account creation -> will add it later :3
+            StartWindow startWindow = new StartWindow();
+            startWindow.Show();
+            this.Close();
+        }
+
+        private void NextButton_Click(object sender, RoutedEventArgs e)
+        {
             ChooseYourUniversityWindow chooseYourUniversityWindow = new ChooseYourUniversityWindow();
             chooseYourUniversityWindow.Show();
             this.Hide();
-
         }
     }
 }

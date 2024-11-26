@@ -27,8 +27,16 @@ namespace RoomPals
 
         private void ConfirmYourChoiceButton_Click(object sender, RoutedEventArgs e)
         {
+            // this has to show if in account creation otherwise the user has to exit through the go back click
             QuizWindow quizWindow = new QuizWindow();
             quizWindow.Show();
+            this.Close();
+        }
+
+        private void go_back_Click(object sender, RoutedEventArgs e)
+        {
+            StartWindow startWindow = new StartWindow();
+            startWindow.Show();
             this.Close();
         }
     }
