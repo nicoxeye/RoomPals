@@ -52,7 +52,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="EPPlus" Version="7.4.2" />
+    <PackageReference Include="EPPlus" Version="7.5.1" />
     <PackageReference Include="System.Text.Json" Version="9.0.0" />
   </ItemGroup>
 
