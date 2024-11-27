@@ -24,13 +24,6 @@ namespace RoomPals
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            StartWindow startWindow = new StartWindow();
-            startWindow.Show();
-            this.Close();
-        }
-
         private void UsernameButton_Click(object sender, RoutedEventArgs e)
         {
             UsernameButton.Visibility = Visibility.Collapsed;
@@ -63,7 +56,9 @@ namespace RoomPals
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-
+            StartWindow startWindow = new StartWindow();
+            startWindow.Show();
+            this.Close();
         }
     }
 }
