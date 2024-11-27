@@ -14,27 +14,23 @@ using System.Windows.Shapes;
 
 namespace RoomPals
 {
-    /// <summary>
-    /// Interaction logic for EditProfileWindow.xaml
-    /// </summary>
-    public partial class EditProfileWindow : Window
+    public partial class CreateAccountWindow : Window
     {
-        public EditProfileWindow()
+        public CreateAccountWindow()
         {
             InitializeComponent();
         }
 
-
-        private void go_back_Click(object sender, RoutedEventArgs e)
+        private void NameTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            StartWindow startWindow = new StartWindow();
-            startWindow.Show();
-            this.Close();
+
         }
 
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
-
+            ChooseTownWindow chooseTownWindow = new ChooseTownWindow();
+            chooseTownWindow.Show();
+            this.Hide();
         }
     }
 }

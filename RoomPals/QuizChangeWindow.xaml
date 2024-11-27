@@ -1,11 +1,11 @@
-﻿<Window x:Class="RoomPals.QuizWindow"
+﻿<Window x:Class="RoomPals.QuizChangeWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RoomPals"
         mc:Ignorable="d"
-        Title="QuizWindow" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="QuizChangeWindow" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Background>
         <ImageBrush ImageSource="pack://application:,,,/Images/quiz.png"/>
     </Window.Background>

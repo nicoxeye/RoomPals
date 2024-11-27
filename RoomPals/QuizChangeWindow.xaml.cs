@@ -15,26 +15,20 @@ using System.Windows.Shapes;
 namespace RoomPals
 {
     /// <summary>
-    /// Interaction logic for EditProfileWindow.xaml
+    /// Interaction logic for QuizChangeWindow.xaml
     /// </summary>
-    public partial class EditProfileWindow : Window
+    public partial class QuizChangeWindow : Window
     {
-        public EditProfileWindow()
+        public QuizChangeWindow()
         {
             InitializeComponent();
         }
 
-
-        private void go_back_Click(object sender, RoutedEventArgs e)
+        private void ConfirmYourChoiceButton_Click(object sender, RoutedEventArgs e)
         {
             StartWindow startWindow = new StartWindow();
             startWindow.Show();
             this.Close();
-        }
-
-        private void ConfirmButton_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

@@ -15,26 +15,34 @@ using System.Windows.Shapes;
 namespace RoomPals
 {
     /// <summary>
-    /// Interaction logic for EditProfileWindow.xaml
+    /// Logika interakcji dla klasy ChooseYourUniversityWindow.xaml
     /// </summary>
-    public partial class EditProfileWindow : Window
+    public partial class ChooseYourUniversityWindow : Window
     {
-        public EditProfileWindow()
+        public ChooseYourUniversityWindow()
         {
             InitializeComponent();
+            UserNameTextBlock.Text = "Example:)!";
         }
 
+        private void ConfirmYourChoiceButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
 
         private void go_back_Click(object sender, RoutedEventArgs e)
         {
+            // this will be blocked if the user is in the account creation -> will add it later :3
             StartWindow startWindow = new StartWindow();
             startWindow.Show();
             this.Close();
         }
 
-        private void ConfirmButton_Click(object sender, RoutedEventArgs e)
+        private void NextButton_Click(object sender, RoutedEventArgs e)
         {
-
+            ChooseFirstLanguage chooseFirstLanguage = new ChooseFirstLanguage();
+            chooseFirstLanguage.Show();
+            this.Hide();
         }
     }
 }

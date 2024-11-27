@@ -112,11 +112,14 @@ namespace RoomPals
             string enteredUsername = UsernameTextBox.Text;
             string enteredPassword = PasswordBox.Password;
 
-            Student newStudent = new Student(enteredEmail, enteredUsername, enteredPassword);
+           // Student newStudent = new Student(enteredEmail, enteredUsername, enteredPassword);
 
             //not finished yet
+            CreateAccountWindow createAccountWindow = new CreateAccountWindow();
+            createAccountWindow.Show();
+            this.Hide();
 
-            MessageBox.Show("Account has been successfully created!");
+            //MessageBox.Show("Account has been successfully created!");
 
         }
 
