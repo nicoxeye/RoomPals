@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RoomPals.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,13 +23,6 @@ namespace RoomPals
         public LogInWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            StartWindow startWindow = new StartWindow();
-            startWindow.Show();
-            this.Close();
         }
 
         private void UsernameButton_Click(object sender, RoutedEventArgs e)
@@ -63,7 +57,28 @@ namespace RoomPals
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
+            string enteredUsername = UsernameTextBox.Text;
+            string enteredPassword = PasswordBox.Password;
 
+            Student authenticatedStudent = StudentData.Students.FirstOrDefault(student => student.Authenticate(enteredUsername, enteredPassword));
+
+            if (authenticatedStudent != null)
+            {
+                StartWindow startWindow = new StartWindow(authenticatedStudent);
+                startWindow.Show();
+                this.Close();
+            }
+            else
+            {
+                // If authentication fails, show a message box
+                MessageBox.Show("Invalid username or password. Please try again.");
+
+                // Optionally, clear the password field for retrying
+                PasswordBox.Clear();
+
+                // Optionally, you can focus on the password box to guide the user
+                PasswordBox.Focus();
+            }
         }
     }
 }
