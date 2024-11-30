@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RoomPals.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,16 @@ namespace RoomPals
     /// </summary>
     public partial class StartWindow : Window
     {
+        private Student _loggedInStudent;
+
         public StartWindow()
         {
             InitializeComponent();
+        }
+        public StartWindow(Student loggedInStudent)
+        {
+            InitializeComponent();
+            _loggedInStudent = loggedInStudent;
         }
 
         private void match_Click(object sender, RoutedEventArgs e)
