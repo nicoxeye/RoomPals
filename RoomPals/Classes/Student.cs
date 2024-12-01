@@ -35,22 +35,7 @@ namespace RoomPals.Classes
 
         // Constructor to initialize student object (only basic info required for sign up)
 
-        public Student(string email, string username , string password)
-        {
-            if (!Regex.IsMatch(email, pattern_email))
-            {
-                throw new ArgumentException("Incorrect email format");
-            }
-            Email = email;
-
-            Username = username;
-
-            if (!Regex.IsMatch(password, pattern_password))
-            {
-                throw new Exception("Incorrect password format");
-            }
-            Password = password;
-        }
+        public Student() : base("") { }
 
         // Constructor to initialize the student object
         public Student(string name, string surname, int age, string major,

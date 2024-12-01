@@ -153,7 +153,7 @@ namespace RoomPals
             City: "Not set"
     );
 
-            StudentData.Students.Add(newStudent);
+            StudentData.AddStudent(newStudent);
             MessageBox.Show("Account has been successfully created!");
 
             CreateAccountWindow createAccountWindow = new CreateAccountWindow(newStudent);
