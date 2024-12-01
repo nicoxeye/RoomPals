@@ -61,7 +61,7 @@
                         Grid.ColumnSpan="4"
                         Style="{StaticResource RoundedTransparentButtonStyle}" 
                         Grid.RowSpan="2"/>
-                
+
                 <TextBox Name="UsernameTextBox" 
                          Grid.Row="3"
                          Grid.Column="2"
@@ -75,9 +75,9 @@
                 <Button Name="Password"
                         Grid.Row="4"
                         Click="Password_Click"
-                        Grid.ColumnSpan="4"
                         Margin="20,25,18,5"
-                        Style="{StaticResource RoundedTransparentButtonStyle}"
+                        Grid.ColumnSpan="4"
+                        Style="{StaticResource RoundedTransparentButtonStyle}" 
                         Grid.RowSpan="2"/>
 
                 <PasswordBox Name="PasswordBox" 
@@ -90,19 +90,20 @@
                          KeyDown="PasswordBoxKeyDown"/>
 
                 <!-- Repeat Password button -->
-                <Button Name="RepeatPassword" 
-                        Grid.Row="6" 
-                        Click="RepeatPassword_Click" 
-                        Grid.ColumnSpan="4" 
+                <Button Name="RepeatPassword"
+                        Grid.Row="6"
+                        Click="RepeatPassword_Click"
                         Margin="20,25,18,5"
-                        Style="{StaticResource RoundedTransparentButtonStyle}" Grid.RowSpan="2"/>
+                        Grid.ColumnSpan="4"
+                        Style="{StaticResource RoundedTransparentButtonStyle}" 
+                        Grid.RowSpan="2"/>
 
                 <PasswordBox Name="RepeatPasswordBox" 
                          Grid.Row="7"
                          Grid.Column="2"
                          Grid.ColumnSpan="2"
-                         Margin="0,5,30,16"
-                         Visibility="Collapsed"
+                         Margin="10,10,50,23"
+                         Visibility="Visible"
                          Style="{StaticResource RoundedTransparentPasswordBoxStyle}"
                          KeyDown="RepeatPasswordBoxKeyDown"/>
 

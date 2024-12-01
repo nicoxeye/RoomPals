@@ -1,6 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Input;
+using System.Xml.Linq;
 using RoomPals.Classes;
 
 namespace RoomPals
@@ -35,8 +36,6 @@ namespace RoomPals
                     UsernameTextBox.Focus();
                 }
                 e.Handled = true;
-
-
             }
 
         }
@@ -90,7 +89,7 @@ namespace RoomPals
         }
         private void RepeatPassword_Click(object sender, RoutedEventArgs e)
         {
-            PasswordBox.Visibility = Visibility.Visible;
+            RepeatPasswordBox.Visibility = RepeatPasswordBox.Visibility == Visibility.Collapsed ? Visibility.Visible : Visibility.Collapsed;
         }
         private void RepeatPasswordBoxKeyDown(object sender, KeyEventArgs e)
         {
@@ -112,14 +111,54 @@ namespace RoomPals
             string enteredUsername = UsernameTextBox.Text;
             string enteredPassword = PasswordBox.Password;
 
-           // Student newStudent = new Student(enteredEmail, enteredUsername, enteredPassword);
+            if (string.IsNullOrWhiteSpace(enteredEmail) || string.IsNullOrWhiteSpace(enteredUsername) ||
+                 string.IsNullOrWhiteSpace(enteredPassword))
+            {
+                MessageBox.Show("Please fill out all fields.");
+                return;
+            }
 
-            //not finished yet
-            CreateAccountWindow createAccountWindow = new CreateAccountWindow();
+            if (!Regex.IsMatch(enteredEmail, @"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"))
+            {
+                MessageBox.Show("Invalid email format.");
+                return;
+            }
+
+            if (!Regex.IsMatch(enteredPassword, @"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,16}$"))
+            {
+                MessageBox.Show("Password must be 8-16 characters long, with at least one uppercase letter, one lowercase letter, and one number.");
+                return;
+            }
+
+            if (StudentData.Students.Any(student => student.Username == enteredUsername))
+            {
+                MessageBox.Show("Username already exists. Please choose another.");
+                return;
+            }
+
+            Student newStudent = new Student(
+            name: "Not set",
+            surname: "Not set",
+            age: 0,
+            major: "Not set",
+            nightOrDay: "Not set",
+            dogOrCat: "Not set",
+            partyOrBook: "Not set",
+            activeOrPassive: "Not set",
+            mainLanguage: "Not set",
+            secondLanguage: "Not set",
+            username: enteredUsername,
+            email: enteredEmail,
+            password: enteredPassword,
+            City: "Not set"
+    );
+
+            StudentData.Students.Add(newStudent);
+            MessageBox.Show("Account has been successfully created!");
+
+            CreateAccountWindow createAccountWindow = new CreateAccountWindow(newStudent);
             createAccountWindow.Show();
             this.Hide();
-
-            //MessageBox.Show("Account has been successfully created!");
 
         }
 
