@@ -1,0 +1,83 @@
+﻿<Window x:Class="RoomPals.CreateAccountWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RoomPals"
+        mc:Ignorable="d"
+        Title="CreateAccountWindow" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="pack://application:,,,/Images/basicinfo.png"/>
+    </Window.Background>
+
+    <Frame x:Name="InformationsFrame" NavigationUIVisibility="Hidden">
+        <Frame.Content>
+            <Grid >
+                <TextBox Name="NameTextBox" 
+                         Width="162" 
+                         Height="21" 
+                         FontFamily="Century Gothic"
+                         HorizontalAlignment="Left" 
+                         VerticalAlignment="Top" 
+                         Margin="183,391,0,0" 
+                         FontSize="17" 
+                         Background="Transparent" 
+                         BorderThickness="0" 
+                         Foreground="White" 
+                         Opacity="0.7"
+                         />
+
+                <TextBox Name="LastNameTextBox" 
+                         Width="152" 
+                         Height="21" 
+                         FontFamily="Century Gothic"
+                         HorizontalAlignment="Left" 
+                         VerticalAlignment="Top" 
+                         Margin="188,471,0,0" 
+                         FontSize="17" 
+                         Background="Transparent" 
+                         BorderThickness="0" 
+                         Foreground="White" 
+                         Opacity="0.7"
+                         />
+
+                <TextBox Name="AgeTextBox" 
+                         Width="126" 
+                         Height="21" 
+                         FontFamily="Century Gothic"
+                         HorizontalAlignment="Left" 
+                         VerticalAlignment="Top" 
+                         Margin="188,551,0,0" 
+                         FontSize="17" 
+                         Background="Transparent" 
+                         BorderThickness="0" 
+                         Foreground="White" 
+                         Opacity="0.7"
+                         />
+
+                <TextBox Name="MajorTextBox" 
+                         Width="152" 
+                         Height="21" 
+                         HorizontalAlignment="Left" 
+                         VerticalAlignment="Top" 
+                         Margin="188,623,0,0" 
+                         FontSize="17" 
+                         FontFamily="Century Gothic"
+                         Background="Transparent" 
+                         BorderThickness="0" 
+                         Foreground="White" 
+                         Opacity="0.7"
+                         />
+
+                <Button Name="ConfirmButton" 
+                        HorizontalAlignment="Left" 
+                        VerticalAlignment="Top" Height="52" Width="174" 
+                        Style="{StaticResource RoundedTransparentButtonStyle}" 
+                        Margin="105,723,0,0"
+                        Click="ConfirmButton_Click" />
+
+            </Grid>
+        </Frame.Content>
+    </Frame>
+
+</Window>
