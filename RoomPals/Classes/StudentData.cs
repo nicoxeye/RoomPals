@@ -8,7 +8,7 @@ namespace RoomPals.Classes
 {
     public static class StudentData
     {
-        public static List<Student> Students { get; private set; } = StudentPersistence.LoadStudents();
+        public static List<Student> Students { get; set; } = StudentPersistence.LoadStudents();
 
         public static void AddStudent(Student student)
         {

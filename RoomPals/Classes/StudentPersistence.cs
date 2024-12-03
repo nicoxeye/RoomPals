@@ -10,7 +10,7 @@ namespace RoomPals.Classes
 {
     public static class StudentPersistence
     {
-        private static string filePath = "students.json";
+        private static string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "Database", "students.json");
 
         // Save all students to file
         public static void SaveStudents(List<Student> students)

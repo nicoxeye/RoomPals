@@ -151,9 +151,10 @@ namespace RoomPals
             email: enteredEmail,
             password: enteredPassword,
             City: "Not set"
-    );
+            );
 
             StudentData.AddStudent(newStudent);
+
             MessageBox.Show("Account has been successfully created!");
 
             CreateAccountWindow createAccountWindow = new CreateAccountWindow(newStudent);
