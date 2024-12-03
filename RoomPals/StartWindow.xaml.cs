@@ -30,6 +30,7 @@ namespace RoomPals
         {
             InitializeComponent();
             _loggedInStudent = loggedInStudent;
+            UsernameTextBlock.Text = $"{_loggedInStudent.Name}";
         }
 
         private void match_Click(object sender, RoutedEventArgs e)
