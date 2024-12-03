@@ -31,6 +31,20 @@
         </Grid.RowDefinitions>
 
 
+        <TextBlock x:Name="UsernameTextBlock" 
+                   Text="" 
+                   Width="187" 
+                   Height="44" 
+                   FontFamily="Century Gothic"
+                   HorizontalAlignment="Left" 
+                   VerticalAlignment="Top" 
+                   Margin="22,64,0,0" 
+                   FontSize="40" 
+                   Background="Transparent" 
+                   Foreground="White" 
+                   Opacity="0.85" RenderTransformOrigin="0.501,0.527" Grid.Column="2" Grid.ColumnSpan="4"
+                 />
+
         <!-- Match Button -->
         <Button Name="match"
                 HorizontalAlignment="Left" Grid.Row="2" 

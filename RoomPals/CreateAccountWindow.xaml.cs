@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RoomPals.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,9 +17,12 @@ namespace RoomPals
 {
     public partial class CreateAccountWindow : Window
     {
-        public CreateAccountWindow()
+        private Student _currentStudent;
+        public CreateAccountWindow(Student student)
         {
             InitializeComponent();
+           _currentStudent = student;
+
         }
 
         private void NameTextBox_KeyDown(object sender, KeyEventArgs e)
