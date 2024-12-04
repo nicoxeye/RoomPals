@@ -7,14 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace RoomPals.Classes
 {
     public class Student:Location
     {
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public int Age { get; set; }
+        public string Name;
+        public string name
+        {
+            get { return Name; }
+            set { value = Name; } // here we need to make it so the Name is in the format: first letter uppercase, the rest lowercase
+        }
+        public string Surname { get; set; } // the same as ^
+        public int Age;
+        public int age
+        {
+            get { return age; }
+            set
+            {
+                if ((value > 16) && (value < 100))
+                {
+                    Age = value;
+                }
+                else MessageBox.Show("Wiek musi byc w przedziale 17-99");
+            }
+        }
         public string Major { get; set; }
         public string NightOrDay { get; set; }
         public string DogOrCat { get; set; }

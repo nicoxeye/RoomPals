@@ -42,5 +42,10 @@ namespace RoomPals.Classes
             // Save the updated list back to the file
             SaveStudents(students);
         }
+
+        public static void EditStudent(Student existingStudent) //TBF
+        {
+
+        }
     }
 }

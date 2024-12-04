@@ -42,7 +42,7 @@ namespace RoomPals
 
         private void editprofile_Click(object sender, RoutedEventArgs e)
         {
-            EditProfileWindow editProfileWindow = new EditProfileWindow();
+            EditProfileWindow editProfileWindow = new EditProfileWindow(_loggedInStudent);
             editProfileWindow.Show();
             this.Hide();
         }
@@ -57,7 +57,7 @@ namespace RoomPals
 
         private void town_Click(object sender, RoutedEventArgs e)
         {
-            ChooseTownWindow chooseTownWindow = new ChooseTownWindow();
+            ChooseTownWindow chooseTownWindow = new ChooseTownWindow(_loggedInStudent);
             chooseTownWindow.Show();
             this.Hide();
         }

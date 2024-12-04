@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RoomPals.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,22 +20,29 @@ namespace RoomPals
     /// </summary>
     public partial class EditProfileWindow : Window
     {
-        public EditProfileWindow()
+        private Student _loggedInStudent;
+        public EditProfileWindow(Student loggedInStudent)
         {
             InitializeComponent();
+            _loggedInStudent = loggedInStudent;
         }
-
 
         private void go_back_Click(object sender, RoutedEventArgs e)
         {
-            StartWindow startWindow = new StartWindow();
+            StartWindow startWindow = new StartWindow(_loggedInStudent);
             startWindow.Show();
             this.Close();
         }
 
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
-
+            //edit
+            NameTextBox.Text = _loggedInStudent.Name;
+            LastNameTextBox.Text = _loggedInStudent.Surname;
+            EmailTextBox.Text = _loggedInStudent.Email;
+            UsernameTextBox.Text = _loggedInStudent.Username;
+            PasswordTextBox.Text = _loggedInStudent.Password;
+            MajorTextBox.Text = _loggedInStudent.Major;
         }
     }
 }
