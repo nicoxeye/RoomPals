@@ -82,5 +82,12 @@ namespace RoomPals
             chooseSecondLanguage.Show();
             this.Hide();
         }
+
+        private void chat_Click(object sender, RoutedEventArgs e)
+        {
+            ChatroomWindow chatroomWindow = new ChatroomWindow();  
+            chatroomWindow.Show();
+            this.Hide();
+        }
     }
 }

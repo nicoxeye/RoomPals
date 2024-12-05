@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Remove="Images\basicinfo.png" />
+    <None Remove="Images\chat.png" />
     <None Remove="Images\chooselan1.png" />
     <None Remove="Images\chooselan1_1.png" />
     <None Remove="Images\chooselan2.png" />
@@ -30,6 +31,7 @@
 
   <ItemGroup>
     <Resource Include="Images\basicinfo.png" />
+    <Resource Include="Images\chat.png" />
     <Resource Include="Images\chooselan1.png" />
     <Resource Include="Images\chooselan1_1.png" />
     <Resource Include="Images\chooselan2.png" />
