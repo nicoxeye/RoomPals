@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RoomPals.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,17 @@ namespace RoomPals
     /// </summary>
     public partial class StartWindow : Window
     {
+        private Student _loggedInStudent;
+
         public StartWindow()
         {
             InitializeComponent();
+        }
+        public StartWindow(Student loggedInStudent)
+        {
+            InitializeComponent();
+            _loggedInStudent = loggedInStudent;
+            UsernameTextBlock.Text = $"{_loggedInStudent.Name}";
         }
 
         private void match_Click(object sender, RoutedEventArgs e)
@@ -33,7 +42,7 @@ namespace RoomPals
 
         private void editprofile_Click(object sender, RoutedEventArgs e)
         {
-            EditProfileWindow editProfileWindow = new EditProfileWindow();
+            EditProfileWindow editProfileWindow = new EditProfileWindow(_loggedInStudent);
             editProfileWindow.Show();
             this.Hide();
         }
@@ -48,7 +57,7 @@ namespace RoomPals
 
         private void town_Click(object sender, RoutedEventArgs e)
         {
-            ChooseTownWindow chooseTownWindow = new ChooseTownWindow();
+            ChooseTownWindow chooseTownWindow = new ChooseTownWindow(_loggedInStudent);
             chooseTownWindow.Show();
             this.Hide();
         }

@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using RoomPals;
 
 namespace RoomPals
 {
@@ -19,13 +20,6 @@ namespace RoomPals
         public MainWindow()
         {
             InitializeComponent();
-
-            LoadDataFromJson();
-        }
-
-        private void LoadDataFromJson()
-        {
-
         }
 
         private void Log_in_Click(object sender, RoutedEventArgs e)

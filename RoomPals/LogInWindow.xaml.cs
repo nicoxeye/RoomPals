@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RoomPals.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,11 +25,60 @@ namespace RoomPals
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void UsernameButton_Click(object sender, RoutedEventArgs e)
         {
-            StartWindow startWindow = new StartWindow();
-            startWindow.Show();
-            this.Close();
+            UsernameButton.Visibility = Visibility.Collapsed;
+            UsernameTextBox.Visibility = Visibility.Visible;
+            UsernameTextBox.Focus();
+        }
+
+        private void UsernameTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                PasswordButton_Click(sender, e);
+            }
+        }
+
+        private void PasswordButton_Click(object sender, RoutedEventArgs e)
+        {
+            PasswordButton.Visibility = Visibility.Collapsed;
+            PasswordBox.Visibility = Visibility.Visible;
+            PasswordBox.Focus();
+        }
+
+        private void PasswordBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                LoginButton_Click(sender, e);
+            }
+        }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            string enteredUsername = UsernameTextBox.Text;
+            string enteredPassword = PasswordBox.Password;
+
+            Student authenticatedStudent = StudentData.Students.FirstOrDefault(student => student.Authenticate(enteredUsername, enteredPassword));
+
+            if (authenticatedStudent != null)
+            {
+                StartWindow startWindow = new StartWindow(authenticatedStudent);
+                startWindow.Show();
+                this.Close();
+            }
+            else
+            {
+                // If authentication fails, show a message box
+                MessageBox.Show("Invalid username or password. Please try again.");
+
+                // Optionally, clear the password field for retrying
+                PasswordBox.Clear();
+
+                // Optionally, you can focus on the password box to guide the user
+                PasswordBox.Focus();
+            }
         }
     }
 }
