@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace RoomPals.Classes
 {
@@ -14,6 +15,7 @@ namespace RoomPals.Classes
     {
         public string Name { get; set; }
         public string Surname { get; set; }
+
         public int Age { get; set; }
         public string Major { get; set; }
         public string NightOrDay { get; set; }
