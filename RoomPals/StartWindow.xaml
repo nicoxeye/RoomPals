@@ -59,6 +59,7 @@
                 VerticalAlignment="Top" Height="144" Width="162" 
                 Style="{StaticResource RoundedTransparentButtonStyle}" 
                 Margin="10,1,0,0" Grid.ColumnSpan="3" Grid.RowSpan="2"
+                Click="chat_Click"
                 />
 
         <!-- Quiz Button -->
