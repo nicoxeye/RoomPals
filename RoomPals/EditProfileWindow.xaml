@@ -40,6 +40,13 @@
                 Margin="5,0,0,0"
                 Click="go_back_Click"/>
 
+        <Button Name="Confirm"
+        HorizontalAlignment="Left" 
+        VerticalAlignment="Top" Height="49" Width="167" 
+        Style="{StaticResource RoundedTransparentButtonStyle}"
+        Margin="54,19,0,0"
+        Click="ConfirmButton_Click" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="4"/>
+
         <TextBox Name="NameTextBox" 
          Width="162" 
          Height="21" 

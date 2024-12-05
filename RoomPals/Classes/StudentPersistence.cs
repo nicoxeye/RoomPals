@@ -43,9 +43,5 @@ namespace RoomPals.Classes
             SaveStudents(students);
         }
 
-        public static void EditStudent(Student existingStudent) //TBF
-        {
-
-        }
     }
 }
