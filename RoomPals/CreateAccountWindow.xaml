@@ -25,6 +25,7 @@
                          BorderThickness="0" 
                          Foreground="White" 
                          Opacity="0.7"
+                         KeyDown="NameTextBox_KeyDown"
                          />
 
                 <TextBox Name="LastNameTextBox" 
@@ -39,6 +40,7 @@
                          BorderThickness="0" 
                          Foreground="White" 
                          Opacity="0.7"
+                         KeyDown="LastNameTextBox_KeyDown"
                          />
 
                 <TextBox Name="AgeTextBox" 
@@ -53,6 +55,7 @@
                          BorderThickness="0" 
                          Foreground="White" 
                          Opacity="0.7"
+                         KeyDown="AgeTextBox_KeyDown"
                          />
 
                 <TextBox Name="MajorTextBox" 
@@ -67,6 +70,7 @@
                          BorderThickness="0" 
                          Foreground="White" 
                          Opacity="0.7"
+                         KeyDown="MajorTextBox_KeyDown"
                          />
 
                 <Button Name="ConfirmButton" 
