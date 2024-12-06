@@ -25,5 +25,23 @@ namespace RoomPals.Classes
             new Student("Jakub", "Jamrozy", 25, "Logistics", "night", "cat", "party", "active", "pl", "none", "jamrox", "jamrox@op.pl","Randompassword1", "myslowice")
         }; */
 
+        public static void UpdateStudent(Student updatedStudent)
+        {
+            // find a student by username
+            var studentIndex = Students.FindIndex(s => s.Username == updatedStudent.Username);
+
+            if (studentIndex >= 0)
+            {
+                // update student data
+                Students[studentIndex] = updatedStudent;
+
+                // save whole list to json
+                StudentPersistence.SaveStudents(Students);
+            }
+            else
+            {
+                throw new Exception("Student not found in the database.");
+            }
+        }
     }
 }
