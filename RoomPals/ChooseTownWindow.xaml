@@ -25,45 +25,61 @@
                          />
 
         <StackPanel Orientation="Vertical" Margin="299,292,55,168">
-            <RadioButton Content="" 
+            <RadioButton 
+                         Name="Katowice"
                          Margin="0,0,0,50"
+                         Click="CityButton_Click"
                          >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
             </RadioButton>
 
-            <RadioButton Content="" 
+            <RadioButton 
+                         Name="Myslowice"
                          Margin="0,0,0,50"
+                         Click="CityButton_Click"
                          >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
             </RadioButton>
 
-            <RadioButton Content="" 
-             Margin="0,0,0,50">
+            <RadioButton  
+                         Name="Chorzow"
+                         Margin="0,0,0,50"
+                         Click="CityButton_Click"
+                         >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
             </RadioButton>
 
-            <RadioButton Content="" 
-             Margin="0,0,0,50">
+            <RadioButton 
+                         Name="Zabrze"
+                         Margin="0,0,0,50"
+                         Click="CityButton_Click"
+                         >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
             </RadioButton>
 
-            <RadioButton Content="" 
-             Margin="0,0,0,50">
+            <RadioButton  
+                         Name="Sosnowiec"
+                         Margin="0,0,0,50"
+                         Click="CityButton_Click"
+                         >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
             </RadioButton>
 
-            <RadioButton Content="" 
-             Margin="0,0,0,50">
+            <RadioButton 
+                         Name="Rybnik"
+                         Margin="0,0,0,50"
+                         Click="CityButton_Click"
+                         >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>

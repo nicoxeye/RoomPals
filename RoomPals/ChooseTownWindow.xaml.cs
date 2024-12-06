@@ -17,42 +17,62 @@ namespace RoomPals
 {
     public partial class ChooseTownWindow : Window
     {
-        private Student _loggedInStudent;
-        public ChooseTownWindow()
+        private Student _currentStudent;
+        public ChooseTownWindow(Student student)
         {
+            _currentStudent = student;
             InitializeComponent();
-            UserNameTextBlock.Text = "Example:)!"; //(temporary solution) here the code will enable to display
-                                                   //the previously collected username
+            UserNameTextBlock.Text = $"{_currentStudent.Name}";
+
+            Katowice.Content = "Katowice";
+            Myslowice.Content = "Myslowice";
+            Chorzow.Content = "Chorzow";
+            Zabrze.Content = "Zabrze";
+            Sosnowiec.Content = "Sosnowiec";
+            Rybnik.Content = "Rybnik";
         }
 
-        public ChooseTownWindow(Student loggedinStudent)
+        private void CityButton_Click(object sender, RoutedEventArgs e)
         {
-            _loggedInStudent = loggedinStudent;
-            InitializeComponent();
-            UserNameTextBlock.Text = $"{loggedinStudent.Name}"; 
-        }
+            RadioButton clickedRadioButton = sender as RadioButton; 
+            if (clickedRadioButton != null)
+            {
+                string selectedCity = clickedRadioButton.Content.ToString();
+                _currentStudent.city = selectedCity; 
 
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-            //code that adds the town to the database of users
+            }
         }
 
         private void ConfirmYourChoiceButton_Click(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrEmpty(_currentStudent.city))
+            {
+                MessageBox.Show("Please select a town before confirming.");
+                return;
+            }
 
-
+            StudentData.UpdateStudent(_currentStudent);
+            // messagebox only for me to see if its working
+            MessageBox.Show($"You have confirmed your choice: {_currentStudent.city}");
         }
 
         private void go_back_Click(object sender, RoutedEventArgs e)
         {
             // this will be blocked if the user is in the account creation -> will add it later :3
-            StartWindow startWindow = new StartWindow(_loggedInStudent);
+            StartWindow startWindow = new StartWindow(_currentStudent);
             startWindow.Show();
             this.Close();
         }
 
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrEmpty(_currentStudent.city))
+            {
+                MessageBox.Show("Please select a town before confirming.");
+                return;
+            }
+            StudentData.UpdateStudent(_currentStudent);
+            MessageBox.Show($"You have confirmed your choice: {_currentStudent.city}");
             ChooseYourUniversityWindow chooseYourUniversityWindow = new ChooseYourUniversityWindow();
             chooseYourUniversityWindow.Show();
             this.Hide();
