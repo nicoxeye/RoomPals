@@ -71,7 +71,7 @@ namespace RoomPals
 
         private void language1_Click(object sender, RoutedEventArgs e)
         {
-            ChooseFirstLanguage chooseFirstLanguage = new ChooseFirstLanguage();
+            ChooseFirstLanguage chooseFirstLanguage = new ChooseFirstLanguage(_loggedInStudent);
             chooseFirstLanguage.Show();
             this.Hide();
         }

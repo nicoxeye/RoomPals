@@ -77,7 +77,7 @@ namespace RoomPals
 
             // messagebox only for me to see if its working (again hehe)
             MessageBox.Show($"You have confirmed your choice: {_currentStudent.University}");
-            ChooseFirstLanguage chooseFirstLanguage = new ChooseFirstLanguage();
+            ChooseFirstLanguage chooseFirstLanguage = new ChooseFirstLanguage(_currentStudent);
             chooseFirstLanguage.Show();
             this.Hide();
         }
