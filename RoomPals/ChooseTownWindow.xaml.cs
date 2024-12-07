@@ -73,7 +73,7 @@ namespace RoomPals
             }
             StudentData.UpdateStudent(_currentStudent);
             MessageBox.Show($"You have confirmed your choice: {_currentStudent.city}");
-            ChooseYourUniversityWindow chooseYourUniversityWindow = new ChooseYourUniversityWindow();
+            ChooseYourUniversityWindow chooseYourUniversityWindow = new ChooseYourUniversityWindow(_currentStudent);
             chooseYourUniversityWindow.Show();
             this.Hide();
         }

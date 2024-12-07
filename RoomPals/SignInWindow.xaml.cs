@@ -141,6 +141,7 @@ namespace RoomPals
             surname: "Not set",
             age: 0,
             major: "Not set",
+            university: "Not set",
             nightOrDay: "Not set",
             dogOrCat: "Not set",
             partyOrBook: "Not set",

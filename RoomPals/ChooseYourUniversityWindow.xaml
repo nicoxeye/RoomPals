@@ -26,45 +26,61 @@
                          />
 
         <StackPanel Orientation="Vertical" Margin="322,275,32,185">
-            <RadioButton Content="" 
-                         Margin="0,0,0,50"
+            <RadioButton 
+                Name="UOE"
+                Margin="0,0,0,50"
+                Click="UniButton_Click"
+                       >
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+
+            <RadioButton 
+                Name="SUOT"
+                Margin="0,0,0,50"
+                Click="UniButton_Click"
                          >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
             </RadioButton>
 
-            <RadioButton Content="" 
-                         Margin="0,0,0,50"
-                         >
+            <RadioButton 
+                Name="UOS"
+                Margin="0,0,0,50"
+                Click="UniButton_Click"
+                >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
             </RadioButton>
 
-            <RadioButton Content="" 
-             Margin="0,0,0,50">
+            <RadioButton
+                Name="UOCF"
+                Margin="0,0,0,50"
+                Click="UniButton_Click"
+                >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
             </RadioButton>
 
-            <RadioButton Content="" 
-             Margin="0,0,0,50">
+            <RadioButton 
+                Name="UOMH"
+                Margin="0,0,0,50"
+                Click="UniButton_Click"
+                >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
             </RadioButton>
 
-            <RadioButton Content="" 
-             Margin="0,0,0,50">
-                <RadioButton.RenderTransform>
-                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
-                </RadioButton.RenderTransform>
-            </RadioButton>
-
-            <RadioButton Content="" 
-             Margin="0,0,0,50">
+            <RadioButton
+                Name="MAOS"
+                Margin="0,0,0,50"
+                Click="UniButton_Click"
+                >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
