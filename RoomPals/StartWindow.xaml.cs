@@ -64,7 +64,7 @@ namespace RoomPals
 
         private void uni_Click(object sender, RoutedEventArgs e)
         {
-            ChooseYourUniversityWindow chooseYourUniversityWindow = new ChooseYourUniversityWindow();
+            ChooseYourUniversityWindow chooseYourUniversityWindow = new ChooseYourUniversityWindow(_loggedInStudent);
             chooseYourUniversityWindow.Show();
             this.Hide();
         }

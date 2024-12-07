@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RoomPals.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,15 +20,41 @@ namespace RoomPals
     /// </summary>
     public partial class ChooseYourUniversityWindow : Window
     {
-        public ChooseYourUniversityWindow()
+        private Student _currentStudent;
+        public ChooseYourUniversityWindow(Student student)
         {
+            _currentStudent = student;
             InitializeComponent();
-            UserNameTextBlock.Text = "Example:)!";
+            UserNameTextBlock.Text = $"{_currentStudent.Name}";
+            UOE.Content = "University Of Economics";
+            SUOT.Content = "Silesian University Of Technology";
+            UOS.Content = "University Of Silesia";
+            UOCF.Content = "University Of Catching Fishes";
+            UOMH.Content = "University Of Mushroom Hunting";
+            MAOS.Content = "Midwich Academy Of Shadows";
+        }
+
+        private void UniButton_Click(object sender, RoutedEventArgs e)
+        {
+            RadioButton clickedRadioButton = sender as RadioButton;
+            if (clickedRadioButton != null)
+            {
+                string selectedUni = clickedRadioButton.Content.ToString();
+                _currentStudent.University = selectedUni;
+            }
         }
 
         private void ConfirmYourChoiceButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (string.IsNullOrEmpty(_currentStudent.University))
+            {
+                MessageBox.Show("Please select a university before confirming.");
+                return;
+            }
+
+            StudentData.UpdateStudent(_currentStudent);
+            // messagebox only for me to see if its working (again hehe)
+            MessageBox.Show($"You have confirmed your choice: {_currentStudent.University}");
         }
 
         private void go_back_Click(object sender, RoutedEventArgs e)
@@ -40,6 +67,16 @@ namespace RoomPals
 
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrEmpty(_currentStudent.University))
+            {
+                MessageBox.Show("Please select a university before confirming.");
+                return;
+            }
+
+            StudentData.UpdateStudent(_currentStudent);
+
+            // messagebox only for me to see if its working (again hehe)
+            MessageBox.Show($"You have confirmed your choice: {_currentStudent.University}");
             ChooseFirstLanguage chooseFirstLanguage = new ChooseFirstLanguage();
             chooseFirstLanguage.Show();
             this.Hide();

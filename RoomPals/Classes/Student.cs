@@ -18,6 +18,7 @@ namespace RoomPals.Classes
 
         public int Age { get; set; }
         public string Major { get; set; }
+        public string University { get; set; }
         public string NightOrDay { get; set; }
         public string DogOrCat { get; set; }
         public string PartyOrBook { get; set; }
@@ -40,7 +41,7 @@ namespace RoomPals.Classes
         public Student() : base("") { }
 
         // Constructor to initialize the student object
-        public Student(string name, string surname, int age, string major,
+        public Student(string name, string surname, int age, string major, string university,
                       string nightOrDay, string dogOrCat, string partyOrBook, string activeOrPassive,
                       string mainLanguage, string secondLanguage, string username, string email, string password, string City):base(City)
         {
@@ -48,6 +49,7 @@ namespace RoomPals.Classes
             Surname = surname;
             Age = age;
             Major = major;
+            University = university;
             NightOrDay = nightOrDay;
             DogOrCat = dogOrCat;
             PartyOrBook = partyOrBook;
@@ -76,7 +78,7 @@ namespace RoomPals.Classes
 
         public override string ToString()
         {
-            return $"{Name} {Surname}, Age: {Age}, Major: {Major}, City: {city}, Preferences: {NightOrDay}, {DogOrCat}, {PartyOrBook}, Activity: {ActiveOrPassive}, Languages: {MainLanguage}, {SecondLanguage}";
+            return $"{Name} {Surname}, Age: {Age}, Major: {Major}, University: {University}, City: {city}, Preferences: {NightOrDay}, {DogOrCat}, {PartyOrBook}, Activity: {ActiveOrPassive}, Languages: {MainLanguage}, {SecondLanguage}";
         }
     }
 }
