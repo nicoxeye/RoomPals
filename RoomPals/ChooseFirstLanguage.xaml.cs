@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RoomPals.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,24 +15,57 @@ using System.Windows.Shapes;
 
 namespace RoomPals
 {
-    /// <summary>
-    /// Logika interakcji dla klasy ChooseFirstLanguage.xaml
-    /// </summary>
+
     public partial class ChooseFirstLanguage : Window
     {
-        public ChooseFirstLanguage()
+        private Student _currentStudent;
+        public ChooseFirstLanguage(Student student)
         {
+            _currentStudent = student;
             InitializeComponent();
-            UserNameTextBlock.Text = "Example:)!";
+            UserNameTextBlock.Text = $"{_currentStudent.Name}";
+            English.Content = "English";
+            Polish.Content = "Polish";
+            German.Content = "German";
+            Spanish.Content = "Spanish";
+            Ukrainian.Content = "Ukrainian";
+            French.Content = "French";
+            
+        }
+
+        private void UniButton_Click(object sender, RoutedEventArgs e)
+        {
+            RadioButton clickedRadioButton = sender as RadioButton;
+            if (clickedRadioButton != null)
+            {
+                string selectedLan = clickedRadioButton.Content.ToString();
+                _currentStudent.MainLanguage = selectedLan;
+
+            }
         }
 
         private void ConfirmYourChoiceButton_Click(object sender, RoutedEventArgs e)
         {
-           
+            if (string.IsNullOrEmpty(_currentStudent.MainLanguage))
+            {
+                MessageBox.Show("Please select a language before confirming.");
+                return;
+            }
+
+            StudentData.UpdateStudent(_currentStudent);
+            // yk the deal 
+            MessageBox.Show($"You have confirmed your choice: {_currentStudent.MainLanguage}");
         }
 
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrEmpty(_currentStudent.MainLanguage))
+            {
+                MessageBox.Show("Please select a language before confirming.");
+                return;
+            }
+            StudentData.UpdateStudent(_currentStudent);
+            MessageBox.Show($"You have confirmed your choice: {_currentStudent.MainLanguage}");
             ChooseSecondLanguage chooseSecondLanguage = new ChooseSecondLanguage();
             chooseSecondLanguage.Show();
             this.Close();
