@@ -66,7 +66,7 @@ namespace RoomPals
             }
             StudentData.UpdateStudent(_currentStudent);
             MessageBox.Show($"You have confirmed your choice: {_currentStudent.MainLanguage}");
-            ChooseSecondLanguage chooseSecondLanguage = new ChooseSecondLanguage();
+            ChooseSecondLanguage chooseSecondLanguage = new ChooseSecondLanguage(_currentStudent);
             chooseSecondLanguage.Show();
             this.Close();
 
