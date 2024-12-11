@@ -56,7 +56,7 @@ namespace RoomPals
             // last one wooooo 
             MessageBox.Show($"You have confirmed your choice: {_currentStudent.SecondLanguage}");
 
-            QuizWindow quizWindow = new QuizWindow();
+            QuizWindow quizWindow = new QuizWindow(_currentStudent);
             quizWindow.Show();
             this.Close();
         }
