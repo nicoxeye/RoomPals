@@ -8,7 +8,7 @@
         Title="ChooseSecondLanguage" Height="852" Width="393" ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen">
     <Window.Background>
-        <ImageBrush ImageSource="pack://application:,,,/Images/chooselan2_2.png"/>
+        <ImageBrush ImageSource="pack://application:,,,/Images/chooseLang2_3.png"/>
     </Window.Background>
     <Grid>
         <TextBlock x:Name="UserNameTextBlock" 

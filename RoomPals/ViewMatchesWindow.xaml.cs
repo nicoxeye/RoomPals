@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RoomPals.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,11 @@ namespace RoomPals
     /// </summary>
     public partial class ViewMatchesWindow : Window
     {
-        public ViewMatchesWindow()
+        private Student _loggedInStudent;
+        public ViewMatchesWindow(Student loggedInStudent)
         {
             InitializeComponent();
+            _loggedInStudent = loggedInStudent;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RoomPals.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,8 +20,10 @@ namespace RoomPals
     /// </summary>
     public partial class QuizWindow : Window
     {
-        public QuizWindow()
+        private Student _loggedInStudent;
+        public QuizWindow(Student loggedInStudent)
         {
+            _loggedInStudent = loggedInStudent;
             InitializeComponent();
         }
 

@@ -6,7 +6,46 @@
         xmlns:local="clr-namespace:RoomPals"
         mc:Ignorable="d"
         Title="ViewMatchesWindow" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Window.Background>
+        <ImageBrush ImageSource="Images\seePossibleRoomies.png" Stretch="Fill"/>
+    </Window.Background>
+
     <Grid>
-        
+        <TextBlock x:Name="NameTextBlock" 
+                   Text="" 
+                   Width="144" 
+                   Height="44" 
+                   FontFamily="Century Gothic"
+                   HorizontalAlignment="Left" 
+                   VerticalAlignment="Top" 
+                   Margin="52,311,0,0" 
+                   FontSize="40" 
+                   Background="Transparent" 
+                   Foreground="White" 
+                   Opacity="0.85" RenderTransformOrigin="0.501,0.527"
+                 />
+        <TextBlock x:Name="LastNameTextBlock" 
+                   Text="" 
+                   Width="176" 
+                   Height="44" 
+                   FontFamily="Century Gothic"
+                   HorizontalAlignment="Left" 
+                   VerticalAlignment="Top" 
+                   Margin="188,311,0,0" 
+                   FontSize="40" 
+                   Background="Transparent" 
+                   Foreground="White" 
+                   Opacity="0.85" RenderTransformOrigin="0.501,0.527"
+                 >
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.516"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
     </Grid>
 </Window>
