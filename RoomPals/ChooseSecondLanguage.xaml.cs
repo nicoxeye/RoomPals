@@ -66,7 +66,7 @@ namespace RoomPals
             {
                 StartWindow startWindow = new StartWindow(_loggedInStudent);
                 startWindow.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
