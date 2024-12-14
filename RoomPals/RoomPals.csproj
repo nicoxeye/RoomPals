@@ -15,19 +15,30 @@
     <None Remove="Images\chooselan1_1.png" />
     <None Remove="Images\chooselan2.png" />
     <None Remove="Images\chooselan2_2.png" />
+    <None Remove="Images\chooseLang1_3.png" />
+    <None Remove="Images\chooseLang2_3.png" />
     <None Remove="Images\choosetown.png" />
     <None Remove="Images\choosetown1.png" />
+    <None Remove="Images\chooseTown3.png" />
     <None Remove="Images\chooseuni.png" />
     <None Remove="Images\chooseuni1.png" />
+    <None Remove="Images\chooseUni3.png" />
     <None Remove="Images\editProfile1.png" />
     <None Remove="Images\LogIn.png" />
     <None Remove="Images\mainpage.png" />
     <None Remove="Images\quiz.png" />
     <None Remove="Images\registration.png" />
+    <None Remove="Images\seePossibleRoomies.png" />
     <None Remove="Images\startPage.png" />
     <None Remove="Images\startPage1.png" />
     <None Remove="Images\editProfile.png" />
     <None Remove="Images\startPage2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\chooseLang1_3.png" />
+    <Resource Include="Images\chooseLang2_3.png" />
+    <Resource Include="Images\chooseTown3.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -41,11 +52,13 @@
     <Resource Include="Images\choosetown1.png" />
     <Resource Include="Images\chooseuni.png" />
     <Resource Include="Images\chooseuni1.png" />
+    <Resource Include="Images\chooseUni3.png" />
     <Resource Include="Images\editProfile1.png" />
     <Resource Include="Images\LogIn.png" />
     <Resource Include="Images\mainpage.png" />
     <Resource Include="Images\quiz.png" />
     <Resource Include="Images\registration.png" />
+    <Resource Include="Images\seePossibleRoomies.png" />
     <Resource Include="Images\startPage.png" />
     <Resource Include="Images\startPage1.png" />
     <Resource Include="Images\startPage2.png" />
