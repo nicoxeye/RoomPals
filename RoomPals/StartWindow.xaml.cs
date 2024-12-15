@@ -21,6 +21,7 @@ namespace RoomPals
     public partial class StartWindow : Window
     {
         private Student _loggedInStudent;
+        List<Student> allStudents = StudentData.Students;
         public StartWindow()
         {
             InitializeComponent();
@@ -34,9 +35,9 @@ namespace RoomPals
 
         private void match_Click(object sender, RoutedEventArgs e)
         {
-            ViewMatchesWindow viewMatchesWindow = new ViewMatchesWindow(_loggedInStudent);
+            ViewMatchesWindow viewMatchesWindow = new ViewMatchesWindow(_loggedInStudent, allStudents);
             viewMatchesWindow.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void editprofile_Click(object sender, RoutedEventArgs e)
