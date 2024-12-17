@@ -6,7 +6,134 @@
         xmlns:local="clr-namespace:RoomPals"
         mc:Ignorable="d"
         Title="ViewMatchesWindow" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Window.Background>
+        <ImageBrush ImageSource="Images\seePossibleRoomies.png" Stretch="Fill"/>
+    </Window.Background>
+
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <!-- Header -->
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <!-- Content -->
+            <!-- Footer -->
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <!-- Dynamic column width -->
+            <ColumnDefinition Width="*"/>
+
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button 
+                FontSize="20"
+                Margin="36,36,0,0"
+                BorderThickness="0"
+                Width="136"
+                Height="47"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Opacity="0"
+                Click="SkipButton_Click" Grid.ColumnSpan="3" Grid.Row="8" />
+
+        <Button Name="go_back"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" Height="36" Width="42" 
+                Style="{StaticResource RoundedTransparentButtonStyle}"
+                Margin="14,6,0,0"
+                Click="go_back_Click" RenderTransformOrigin="0.548,0.501"/>
+
+        <TextBlock x:Name="CityTextBlock" 
+                   Text="" 
+                   Width="250" 
+                   FontFamily="Century Gothic"
+                   HorizontalAlignment="Left" 
+                   Margin="32,54,0,54" 
+                   FontSize="30" 
+                   Background="Transparent" 
+                   Foreground="White" Grid.ColumnSpan="5" RenderTransformOrigin="0.5,0.5" Grid.Row="5" Grid.Column="1" Grid.RowSpan="2" 
+                 >
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock x:Name="ScoreTextBlock" 
+           Text="" 
+           Width="92" 
+           FontFamily="Century Gothic"
+           HorizontalAlignment="Left" 
+           Margin="44,42,0,0" 
+           FontSize="36" 
+           Background="Transparent" 
+           Foreground="White" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="6" 
+         />
+
+        <TextBlock x:Name="AgeTextBlock" 
+                   Text="" 
+                   Width="180" 
+                   FontFamily="Century Gothic"
+                   HorizontalAlignment="Left" 
+                   Margin="32,46,0,2" 
+                   FontSize="30" 
+                   Background="Transparent" 
+                   Foreground="White" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="4" 
+                 />
+        <TextBlock x:Name="MajorTextBlock" 
+                   Text="" 
+                   Width="274" 
+                   FontFamily="Century Gothic"
+                   HorizontalAlignment="Left" 
+                   Margin="54,16,0,24" 
+                   FontSize="22" 
+                   Background="Transparent" 
+                   Foreground="White" Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="5" 
+                 />
+
+        <TextBlock x:Name="NameTextBlock" 
+                   Text="" 
+                   TextAlignment="Center"
+                   FontFamily="Century Gothic"
+                   Margin="0,21,0,21" 
+                   FontSize="30" 
+                   Background="Transparent" 
+                   Foreground="White" Grid.ColumnSpan="4" Grid.Row="3" TextWrapping="Wrap" HorizontalAlignment="Center" Width="162" 
+                 />
+        <TextBlock x:Name="LastNameTextBlock" 
+                   Text="" 
+                   TextAlignment="Center"
+                   FontFamily="Century Gothic"
+                   Margin="60,20,30,22" 
+                   FontSize="30" 
+                   Background="Transparent" 
+                   Foreground="White" Grid.Column="2" Grid.ColumnSpan="4" Grid.Row="3" TextWrapping="Wrap" 
+                 >
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.013"/>
+                    <RotateTransform Angle="0.509"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
     </Grid>
 </Window>

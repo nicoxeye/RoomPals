@@ -20,12 +20,14 @@ namespace RoomPals
     /// </summary>
     public partial class ChooseYourUniversityWindow : Window
     {
-        private Student _currentStudent;
-        public ChooseYourUniversityWindow(Student student)
+        private Student _loggedInStudent;
+        private bool _isAccountCreation;
+        public ChooseYourUniversityWindow(Student student, bool isAccountCreation)
         {
-            _currentStudent = student;
+            _loggedInStudent = student;
+            _isAccountCreation = isAccountCreation;
             InitializeComponent();
-            UserNameTextBlock.Text = $"{_currentStudent.Name}";
+            UserNameTextBlock.Text = $"{_loggedInStudent.Name}";
             UOE.Content = "University Of Economics";
             SUOT.Content = "Silesian University Of Technology";
             UOS.Content = "University Of Silesia";
@@ -40,46 +42,46 @@ namespace RoomPals
             if (clickedRadioButton != null)
             {
                 string selectedUni = clickedRadioButton.Content.ToString();
-                _currentStudent.University = selectedUni;
+                _loggedInStudent.University = selectedUni;
             }
         }
 
         private void ConfirmYourChoiceButton_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(_currentStudent.University))
+            if (string.IsNullOrEmpty(_loggedInStudent.University))
             {
                 MessageBox.Show("Please select a university before confirming.");
                 return;
             }
 
-            StudentData.UpdateStudent(_currentStudent);
-            // messagebox only for me to see if its working (again hehe)
-            MessageBox.Show($"You have confirmed your choice: {_currentStudent.University}");
+            StudentData.UpdateStudent(_loggedInStudent);
+            MessageBox.Show($"You have confirmed your choice: {_loggedInStudent.University}");
+            if (_isAccountCreation)
+            {
+                ChooseFirstLanguage chooseFirstLanguage1 = new ChooseFirstLanguage(_loggedInStudent, true);
+                chooseFirstLanguage1.Show();
+                this.Hide();
+            }
+            else
+            {
+                ChooseFirstLanguage chooseFirstLangugage= new ChooseFirstLanguage(_loggedInStudent, false);
+                chooseFirstLangugage.Show();
+                this.Hide();
+            }
         }
 
         private void go_back_Click(object sender, RoutedEventArgs e)
         {
-            // this will be blocked if the user is in the account creation -> will add it later :3
-            StartWindow startWindow = new StartWindow();
+            if (_isAccountCreation)
+            {
+                MessageBox.Show("You cannot go back during account creation.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            // Otherwise, navigate back
+            StartWindow startWindow = new StartWindow(_loggedInStudent);
             startWindow.Show();
             this.Close();
         }
 
-        private void NextButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (string.IsNullOrEmpty(_currentStudent.University))
-            {
-                MessageBox.Show("Please select a university before confirming.");
-                return;
-            }
-
-            StudentData.UpdateStudent(_currentStudent);
-
-            // messagebox only for me to see if its working (again hehe)
-            MessageBox.Show($"You have confirmed your choice: {_currentStudent.University}");
-            ChooseFirstLanguage chooseFirstLanguage = new ChooseFirstLanguage(_currentStudent);
-            chooseFirstLanguage.Show();
-            this.Hide();
-        }
     }
 }

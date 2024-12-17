@@ -182,5 +182,12 @@ namespace RoomPals
         {
             return !string.IsNullOrEmpty(username);
         }
+
+        private void go_back_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+        }
     }
 }

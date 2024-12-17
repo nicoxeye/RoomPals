@@ -70,7 +70,7 @@ namespace RoomPals
                 return;
             }
 
-            ChooseTownWindow chooseTownWindow = new ChooseTownWindow(_currentStudent);
+            ChooseTownWindow chooseTownWindow = new ChooseTownWindow(_currentStudent, true);
             chooseTownWindow.Show();
             this.Hide();
         }

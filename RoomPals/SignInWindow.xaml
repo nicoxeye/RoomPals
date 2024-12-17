@@ -34,6 +34,13 @@
                     <RowDefinition Height="62*"/>
                 </Grid.RowDefinitions>
 
+                <Button Name="go_back"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" Height="20" Width="30" 
+                Style="{StaticResource RoundedTransparentButtonStyle}"
+                Margin="5,0,0,0"
+                Click="go_back_Click"/>
+
                 <!-- Email button -->
                 <Button Name="Email"
                         Grid.ColumnSpan="4" 

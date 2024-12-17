@@ -17,12 +17,14 @@ namespace RoomPals
 {
     public partial class ChooseSecondLanguage : Window
     {
-        private Student _currentStudent;
-        public ChooseSecondLanguage(Student student)
+        private Student _loggedInStudent;
+        private bool _isAccountCreation;
+        public ChooseSecondLanguage(Student student, bool isAccountCreation)
         {
-            _currentStudent = student;
+            _loggedInStudent = student;
+            _isAccountCreation = isAccountCreation;
             InitializeComponent();
-            UserNameTextBlock.Text = $"{_currentStudent.Name}";
+            UserNameTextBlock.Text = $"{_loggedInStudent.Name}";
             English.Content = "English";
             Polish.Content = "Polish";
             German.Content = "German";
@@ -38,7 +40,7 @@ namespace RoomPals
             if (clickedRadioButton != null)
             {
                 string selectedLan2 = clickedRadioButton.Content.ToString();
-                _currentStudent.SecondLanguage = selectedLan2;
+                _loggedInStudent.SecondLanguage = selectedLan2;
 
             }
         }
@@ -46,35 +48,41 @@ namespace RoomPals
         private void ConfirmYourChoiceButton_Click(object sender, RoutedEventArgs e)
         {
             // this has to show if in account creation otherwise the user has to exit through the go back click
-            if (string.IsNullOrEmpty(_currentStudent.SecondLanguage))
+            if (string.IsNullOrEmpty(_loggedInStudent.SecondLanguage))
             {
                 MessageBox.Show("Please select a language before confirming.");
                 return;
             }
 
-            StudentData.UpdateStudent(_currentStudent);
-            // last one wooooo 
-            MessageBox.Show($"You have confirmed your choice: {_currentStudent.SecondLanguage}");
-
-            QuizWindow quizWindow = new QuizWindow(_currentStudent);
-            quizWindow.Show();
-            this.Close();
+            StudentData.UpdateStudent(_loggedInStudent);
+            MessageBox.Show($"You have confirmed your choice: {_loggedInStudent.SecondLanguage}");
+            if (_isAccountCreation)
+            {
+                QuizWindow quizWindow = new QuizWindow(_loggedInStudent);
+                quizWindow.Show();
+                this.Close();
+            }
+            else
+            {
+                StartWindow startWindow = new StartWindow(_loggedInStudent);
+                startWindow.Show();
+                this.Close();
+            }
         }
 
         private void go_back_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(_currentStudent.SecondLanguage))
+            if (_isAccountCreation)
             {
-                MessageBox.Show("Please select a language before confirming.");
+                MessageBox.Show("You cannot go back during account creation.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
-
-            StudentData.UpdateStudent(_currentStudent);
-            MessageBox.Show($"You have confirmed your choice: {_currentStudent.SecondLanguage}");
-
-            StartWindow startWindow = new StartWindow();
-            startWindow.Show();
-            this.Close();
+            else
+            {
+                StartWindow startWindow = new StartWindow(_loggedInStudent);
+                startWindow.Show();
+                this.Close();
+            }
         }
     }
 }

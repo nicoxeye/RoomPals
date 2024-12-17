@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RoomPals.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,14 +20,16 @@ namespace RoomPals
     /// </summary>
     public partial class ChatroomWindow : Window
     {
-        public ChatroomWindow()
+        private Student _loggedInStudent;
+        public ChatroomWindow(Student loggedInStudent)
         {
             InitializeComponent();
+            _loggedInStudent = loggedInStudent;
         }
 
         private void go_back_Click(object sender, RoutedEventArgs e)
         {
-            StartWindow startWindow = new StartWindow();
+            StartWindow startWindow = new StartWindow(_loggedInStudent);
             startWindow.Show();
             this.Close();
         }

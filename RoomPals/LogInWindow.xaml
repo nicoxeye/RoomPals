@@ -30,7 +30,12 @@
         </Grid.RowDefinitions>
 
 
-
+        <Button Name="go_back"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" Height="20" Width="30" 
+                Style="{StaticResource RoundedTransparentButtonStyle}"
+                Margin="5,0,0,0"
+                Click="go_back_Click"/>
 
         <!-- Dekoracje -->
         <Ellipse Width="200" Height="200" Stroke="Gray" StrokeThickness="1"

@@ -21,6 +21,7 @@ namespace RoomPals
         public QuizWindow(Student student)
         {
             _currentStudent = student;
+
             InitializeComponent();
             Night.Content = "Night";
             Day.Content = "Day";
