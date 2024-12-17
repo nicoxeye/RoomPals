@@ -83,7 +83,7 @@
         <Button Name="faq"
         HorizontalAlignment="Center" Grid.Row="6" 
         VerticalAlignment="Top" Height="30" Width="256" 
-        Style="{StaticResource RoundedTransparentButtonStyle}" Grid.ColumnSpan="4" Margin="0,29,0,0" Grid.Column="1"
+        Style="{StaticResource RoundedTransparentButtonStyle}" Grid.ColumnSpan="4" Margin="0,29,0,0" Grid.Column="1" Click="faq_Click"
         />
 
         <!-- Town Button -->
