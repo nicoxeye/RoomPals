@@ -51,10 +51,11 @@
                  Margin="164,9,5,0"
                  FontSize="17"
                  HorizontalAlignment="Stretch"
+                 FontFamily="Century Gothic"
                  VerticalAlignment="Center"
                  Height="40"
                  Style="{StaticResource RoundedTransparentTextBoxStyle}"
-                 
+                 Foreground="White"
                  Visibility="Visible"                 
                  KeyDown="UsernameTextBox_KeyDown" />
         
@@ -79,9 +80,11 @@
                      Margin="164,2,40,0"
                      Style="{StaticResource RoundedTransparentPasswordBoxStyle}"
                      FontSize="17"
+                     FontFamily="Century Gothic"
                      HorizontalAlignment="Stretch"
                      VerticalAlignment="Center"
                      Height="40"
+                     Foreground="White"
                      Visibility="Collapsed"
                      KeyDown="PasswordBox_KeyDown" />
 
