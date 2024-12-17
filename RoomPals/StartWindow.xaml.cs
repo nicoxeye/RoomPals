@@ -89,5 +89,15 @@ namespace RoomPals
             chatroomWindow.Show();
             this.Hide();
         }
+
+        private void faq_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            FAQ faq = new FAQ(_loggedInStudent);
+            faq.Show();
+            this.Hide();
+
+        }
     }
 }
