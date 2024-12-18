@@ -50,6 +50,13 @@
                 Opacity="0"
                 Click="SkipButton_Click" Grid.ColumnSpan="3" Grid.Row="8" />
 
+        <Button 
+             Grid.Column="3"
+             Grid.ColumnSpan="3"
+             Grid.Row="8"
+             Style="{StaticResource RoundedTransparentButtonStyle}"
+             Click="AcceptButton_Click" Margin="24,25,33,3" />
+
         <Button Name="go_back"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top" Height="36" Width="42" 

@@ -1,15 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace RoomPals.Classes
 {
     public class Matchmaking
     {
+        List<Student> allStudents = StudentPersistence.LoadStudents();
         public static List<(Student, int)> FindMatches(Student loggedInUser, List<Student> allStudents)
         {
+            if (allStudents == null || loggedInUser == null)
+            {
+                throw new ArgumentNullException("allStudents or loggedInUser is null.");
+            }
+
             var matches = new List<(Student, int)>();
 
             foreach (var student in allStudents)
@@ -41,5 +49,7 @@ namespace RoomPals.Classes
 
             return score;
         }
+
+        
     }
 }

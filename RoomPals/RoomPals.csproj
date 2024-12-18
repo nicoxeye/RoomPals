@@ -26,6 +26,7 @@
     <None Remove="Images\editProfile1.png" />
     <None Remove="Images\LogIn.png" />
     <None Remove="Images\mainpage.png" />
+    <None Remove="Images\match.png" />
     <None Remove="Images\quiz.png" />
     <None Remove="Images\registration.png" />
     <None Remove="Images\seePossibleRoomies.png" />
@@ -56,6 +57,7 @@
     <Resource Include="Images\editProfile1.png" />
     <Resource Include="Images\LogIn.png" />
     <Resource Include="Images\mainpage.png" />
+    <Resource Include="Images\match.png" />
     <Resource Include="Images\quiz.png" />
     <Resource Include="Images\registration.png" />
     <Resource Include="Images\seePossibleRoomies.png" />

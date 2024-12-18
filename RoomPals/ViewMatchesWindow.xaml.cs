@@ -22,20 +22,36 @@ namespace RoomPals
     {
         private Student _loggedInStudent;
         private List<(Student, int)> _matches;
+        private List<Student> _acceptedMatches = new List<Student>();
+        private List<Student> _allStudents;
         private int _currentMatchIndex;
-        public ViewMatchesWindow(Student loggedInStudent, List<Student> allStudents)
+       
+        public ViewMatchesWindow(Student loggedInStudent, List<Student> allStudents, int currentMatchIndex)
         {
             InitializeComponent();
             _loggedInStudent = loggedInStudent;
+            _allStudents = StudentPersistence.LoadStudents(); //load students from json file
             _matches = Matchmaking.FindMatches(loggedInStudent, allStudents); // Get matches based on the user's preferences
-            _currentMatchIndex = 0;
+            _currentMatchIndex = currentMatchIndex;
 
             DisplayMatch();
         }
 
+        public ViewMatchesWindow(Student loggedInStudent, List<Student> allStudents, List<Student> acceptedMatches, int currentMatchIndex)
+        {
+            InitializeComponent();
+            _loggedInStudent = loggedInStudent;
+            _allStudents = StudentPersistence.LoadStudents();
+            _matches = Matchmaking.FindMatches(loggedInStudent, allStudents); // Get matches based on the user's preferences
+            _currentMatchIndex = currentMatchIndex;
+
+            DisplayMatch();
+            _acceptedMatches = acceptedMatches;
+        }
+
         private void DisplayMatch()
         {
-            if (_matches.Count > 0 && _currentMatchIndex < _matches.Count)
+            if (_matches != null && _matches.Count > 0 && _currentMatchIndex < _matches.Count)
             {
                 var currentMatch = _matches[_currentMatchIndex];
                 var topMatch = currentMatch.Item1; // The matched Student
@@ -54,6 +70,7 @@ namespace RoomPals
                 MessageBox.Show("No more matches available, return to the MainPage to refresh your Matches.");
             }
         }
+
 
         private void SkipButton_Click(object sender, RoutedEventArgs e)
         {
@@ -76,5 +93,17 @@ namespace RoomPals
             startWindow.Show();
             this.Close();
         }
-    }
+
+        private void AcceptButton_Click(object sender, RoutedEventArgs e)
+        {
+            var currentMatch = _matches[_currentMatchIndex].Item1; //accepted match (student)
+            _acceptedMatches.Add(currentMatch); 
+            
+            MatchWindow matchWindow = new MatchWindow(_loggedInStudent, _allStudents, _acceptedMatches, _currentMatchIndex);
+            matchWindow.Show();
+            this.Close();
+        }
+        
+        
+    }  
 }
