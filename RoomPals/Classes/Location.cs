@@ -10,23 +10,20 @@ namespace RoomPals.Classes
 {
     public class Location
     {
-        public string country { get; set; }
         public string city { get; set; }
         public string postal_code { get; set; }
         public string street { get; set; }
         public short street_number { get; set; }
 
-        public Location(string Country, string City, string Postal_Code, string Street, short Street_number)
+        public Location(string City, string Postal_Code, string Street, short Street_number)
         {
-            this.country = Country;
             this.city = City;
             this.postal_code = Postal_Code;
             this.street = Street;
             this.street_number = Street_number;
         }
-        public Location(string Country, string City)
+        public Location(string City)
         {
-            country = Country;
             city = City;
             postal_code = "Unknown";
             street = "Unknown";
