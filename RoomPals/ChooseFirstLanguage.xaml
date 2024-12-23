@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="ChooseFirstLanguage" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Background>
-        <ImageBrush ImageSource="pack://application:,,,/Images/chooseLang1_3.png"/>
+        <ImageBrush ImageSource="pack://application:,,,/Images/new_lan1.png"/>
     </Window.Background>
     <Grid>
         <TextBlock x:Name="UserNameTextBlock" 

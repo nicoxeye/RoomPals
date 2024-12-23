@@ -8,7 +8,7 @@
         Title="ChooseYourUniversityWindow" Height="852" Width="393" ResizeMode="NoResize" 
         WindowStartupLocation="CenterScreen">
     <Window.Background>
-        <ImageBrush ImageSource="pack://application:,,,/Images/chooseUni3.png"/>
+        <ImageBrush ImageSource="pack://application:,,,/Images/new_uni.png"/>
     </Window.Background>
     <Grid>
         <TextBlock x:Name="UserNameTextBlock" 
