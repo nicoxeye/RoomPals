@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="ChooseTownWindow" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Background>
-        <ImageBrush ImageSource="pack://application:,,,/Images/chooseTown3.png"/>
+        <ImageBrush ImageSource="pack://application:,,,/Images/new_town.png"/>
     </Window.Background>
     <Grid >
         <TextBlock x:Name="UserNameTextBlock" 
@@ -17,7 +17,7 @@
                            FontFamily="Century Gothic"
                            HorizontalAlignment="Left" 
                            VerticalAlignment="Top" 
-                           Margin="146,66,0,0" 
+                           Margin="146,73,0,0" 
                            FontSize="35" 
                            Background="Transparent" 
                            Foreground="White" 

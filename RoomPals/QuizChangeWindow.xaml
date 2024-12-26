@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="QuizChangeWindow" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Background>
-        <ImageBrush ImageSource="pack://application:,,,/Images/quiz.png"/>
+        <ImageBrush ImageSource="pack://application:,,,/Images/new_quiz.png"/>
     </Window.Background>
     <Grid>
 
