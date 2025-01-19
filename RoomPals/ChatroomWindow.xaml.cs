@@ -113,7 +113,10 @@ namespace RoomPals
 
                 var smtpClient = new SmtpClient("sandbox.smtp.mailtrap.io", 465)
                 {
-                    Credentials = new NetworkCredential("MAILTRAP_USERNAME", "MAILTRAP_PASSWORD"),
+                    Credentials = new NetworkCredential(
+                        Environment.GetEnvironmentVariable("MAILTRAP_USERNAME"),
+                        Environment.GetEnvironmentVariable("MAILTRAP_PASSWORD")
+                        ),
                     EnableSsl = true
                 };
 
