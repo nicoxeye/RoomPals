@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="ChooseFirstLanguage" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Background>
-        <ImageBrush ImageSource="pack://application:,,,/Images/chooselan1_1.png"/>
+        <ImageBrush ImageSource="pack://application:,,,/Images/new_lan1.png"/>
     </Window.Background>
     <Grid>
         <TextBlock x:Name="UserNameTextBlock" 
@@ -25,45 +25,61 @@
                          />
 
         <StackPanel Orientation="Vertical" Margin="299,292,55,168">
-            <RadioButton Content="" 
-                         Margin="0,0,0,50"
+            <RadioButton 
+                Name="English"
+                Margin="0,0,0,50"
+                Click="UniButton_Click"
                          >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
             </RadioButton>
 
-            <RadioButton Content="" 
-                         Margin="0,0,0,50"
+            <RadioButton 
+                Name="Polish"
+                Margin="0,0,0,50"
+                Click="UniButton_Click"
                          >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
             </RadioButton>
 
-            <RadioButton Content="" 
-             Margin="0,0,0,50">
+            <RadioButton
+                Name="German"
+                Margin="0,0,0,50"
+                Click="UniButton_Click"
+                >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
             </RadioButton>
 
-            <RadioButton Content="" 
-             Margin="0,0,0,50">
+            <RadioButton
+                Name="Spanish"
+                Margin="0,0,0,50"
+                Click="UniButton_Click"
+                >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
             </RadioButton>
 
-            <RadioButton Content="" 
-             Margin="0,0,0,50">
+            <RadioButton 
+                Name="Ukrainian"
+                Margin="0,0,0,50"
+                Click="UniButton_Click"
+                >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
             </RadioButton>
 
-            <RadioButton Content="" 
-             Margin="0,0,0,50">
+            <RadioButton 
+                Name="French"
+                Margin="0,0,0,50"
+                Click="UniButton_Click"
+                >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
@@ -72,18 +88,11 @@
 
 
         <Button Name="ConfirmYourChoiceButton" 
-                HorizontalAlignment="Left" 
+                HorizontalAlignment="Center" 
                 VerticalAlignment="Top" Height="52" Width="147" 
                 Style="{StaticResource RoundedTransparentButtonStyle}" 
-                Margin="36,696,0,0"
+                Margin="0,703,0,0"
                 Click="ConfirmYourChoiceButton_Click" />
-
-        <Button Name="NextButton" 
-                        HorizontalAlignment="Left" 
-                        VerticalAlignment="Top" Height="52" Width="147" 
-                        Style="{StaticResource RoundedTransparentButtonStyle}" 
-                        Margin="212,696,0,0"
-                        Click="NextButton_Click" />
 
         <!-- Go Back Button -->
         <Button Name="go_back"

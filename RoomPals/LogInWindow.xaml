@@ -30,7 +30,12 @@
         </Grid.RowDefinitions>
 
 
-
+        <Button Name="go_back"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" Height="20" Width="30" 
+                Style="{StaticResource RoundedTransparentButtonStyle}"
+                Margin="5,0,0,0"
+                Click="go_back_Click"/>
 
         <!-- Dekoracje -->
         <Ellipse Width="200" Height="200" Stroke="Gray" StrokeThickness="1"
@@ -46,10 +51,11 @@
                  Margin="164,9,5,0"
                  FontSize="17"
                  HorizontalAlignment="Stretch"
+                 FontFamily="Century Gothic"
                  VerticalAlignment="Center"
                  Height="40"
                  Style="{StaticResource RoundedTransparentTextBoxStyle}"
-                 
+                 Foreground="White"
                  Visibility="Visible"                 
                  KeyDown="UsernameTextBox_KeyDown" />
         
@@ -74,9 +80,11 @@
                      Margin="164,2,40,0"
                      Style="{StaticResource RoundedTransparentPasswordBoxStyle}"
                      FontSize="17"
+                     FontFamily="Century Gothic"
                      HorizontalAlignment="Stretch"
                      VerticalAlignment="Center"
                      Height="40"
+                     Foreground="White"
                      Visibility="Collapsed"
                      KeyDown="PasswordBox_KeyDown" />
 

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="ChooseTownWindow" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Background>
-        <ImageBrush ImageSource="pack://application:,,,/Images/choosetown1.png"/>
+        <ImageBrush ImageSource="pack://application:,,,/Images/new_town.png"/>
     </Window.Background>
     <Grid >
         <TextBlock x:Name="UserNameTextBlock" 
@@ -17,7 +17,7 @@
                            FontFamily="Century Gothic"
                            HorizontalAlignment="Left" 
                            VerticalAlignment="Top" 
-                           Margin="146,66,0,0" 
+                           Margin="146,73,0,0" 
                            FontSize="35" 
                            Background="Transparent" 
                            Foreground="White" 
@@ -25,45 +25,61 @@
                          />
 
         <StackPanel Orientation="Vertical" Margin="299,292,55,168">
-            <RadioButton Content="" 
+            <RadioButton 
+                         Name="Katowice"
                          Margin="0,0,0,50"
+                         Click="CityButton_Click"
                          >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
             </RadioButton>
 
-            <RadioButton Content="" 
+            <RadioButton 
+                         Name="Myslowice"
                          Margin="0,0,0,50"
+                         Click="CityButton_Click"
                          >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
             </RadioButton>
 
-            <RadioButton Content="" 
-             Margin="0,0,0,50">
+            <RadioButton  
+                         Name="Chorzow"
+                         Margin="0,0,0,50"
+                         Click="CityButton_Click"
+                         >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
             </RadioButton>
 
-            <RadioButton Content="" 
-             Margin="0,0,0,50">
+            <RadioButton 
+                         Name="Zabrze"
+                         Margin="0,0,0,50"
+                         Click="CityButton_Click"
+                         >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
             </RadioButton>
 
-            <RadioButton Content="" 
-             Margin="0,0,0,50">
+            <RadioButton  
+                         Name="Sosnowiec"
+                         Margin="0,0,0,50"
+                         Click="CityButton_Click"
+                         >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
             </RadioButton>
 
-            <RadioButton Content="" 
-             Margin="0,0,0,50">
+            <RadioButton 
+                         Name="Rybnik"
+                         Margin="0,0,0,50"
+                         Click="CityButton_Click"
+                         >
                 <RadioButton.RenderTransform>
                     <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
                 </RadioButton.RenderTransform>
@@ -72,18 +88,11 @@
 
 
         <Button Name="ConfirmYourChoiceButton" 
-                        HorizontalAlignment="Left" 
+                        HorizontalAlignment="Center" 
                         VerticalAlignment="Top" Height="52" Width="147" 
                         Style="{StaticResource RoundedTransparentButtonStyle}" 
-                        Margin="36,696,0,0"
+                        Margin="0,704,0,0"
                         Click="ConfirmYourChoiceButton_Click" />
-
-        <Button Name="NextButton" 
-                        HorizontalAlignment="Left" 
-                        VerticalAlignment="Top" Height="52" Width="147" 
-                        Style="{StaticResource RoundedTransparentButtonStyle}" 
-                        Margin="212,696,0,0"
-                        Click="NextButton_Click" />
 
         <!-- Go Back Button -->
         <Button Name="go_back"

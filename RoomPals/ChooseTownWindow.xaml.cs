@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RoomPals.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,37 +17,70 @@ namespace RoomPals
 {
     public partial class ChooseTownWindow : Window
     {
-        public ChooseTownWindow()
+        private Student _loggedInStudent;
+        private bool _isAccountCreation;
+        public ChooseTownWindow(Student student, bool isAccountCreation)
         {
+            _loggedInStudent = student;
+            _isAccountCreation = isAccountCreation;
             InitializeComponent();
-            UserNameTextBlock.Text = "Example:)!"; //(temporary solution) here the code will enable to display
-                                                   //the previously collected username
+            UserNameTextBlock.Text = $"{_loggedInStudent.Name}";
+
+            Katowice.Content = "Katowice";
+            Myslowice.Content = "Myslowice";
+            Chorzow.Content = "Chorzow";
+            Zabrze.Content = "Zabrze";
+            Sosnowiec.Content = "Sosnowiec";
+            Rybnik.Content = "Rybnik";
         }
 
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        private void CityButton_Click(object sender, RoutedEventArgs e)
         {
-            //code that adds the town to the database of users
+            RadioButton clickedRadioButton = sender as RadioButton; 
+            if (clickedRadioButton != null)
+            {
+                string selectedCity = clickedRadioButton.Content.ToString();
+                _loggedInStudent.city = selectedCity; 
+
+            }
         }
 
         private void ConfirmYourChoiceButton_Click(object sender, RoutedEventArgs e)
         {
-
-
+            if (string.IsNullOrEmpty(_loggedInStudent.city))
+            {
+                MessageBox.Show("Please select a town before confirming.");
+                return;
+            }
+            StudentData.UpdateStudent(_loggedInStudent);
+            MessageBox.Show($"You have confirmed your choice: {_loggedInStudent.city}");
+            if (_isAccountCreation)
+            {
+                ChooseYourUniversityWindow chooseYourUniversityWindow1 = new ChooseYourUniversityWindow(_loggedInStudent, true);
+                chooseYourUniversityWindow1.Show();
+                this.Hide();
+            }
+            else
+            {
+                ChooseYourUniversityWindow chooseYourUniversityWindow = new ChooseYourUniversityWindow(_loggedInStudent, false);
+                chooseYourUniversityWindow.Show();
+                this.Hide();
+            }
         }
 
         private void go_back_Click(object sender, RoutedEventArgs e)
         {
-            // this will be blocked if the user is in the account creation -> will add it later :3
-            StartWindow startWindow = new StartWindow();
+            if (_isAccountCreation)
+            {
+                MessageBox.Show("You cannot go back during account creation.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            // Otherwise, navigate back
+            StartWindow startWindow = new StartWindow(_loggedInStudent);
             startWindow.Show();
             this.Close();
         }
 
-        private void NextButton_Click(object sender, RoutedEventArgs e)
-        {
-            ChooseYourUniversityWindow chooseYourUniversityWindow = new ChooseYourUniversityWindow();
-            chooseYourUniversityWindow.Show();
-            this.Hide();
-        }
     }
 }
