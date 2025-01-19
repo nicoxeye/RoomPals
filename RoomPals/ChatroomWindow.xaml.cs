@@ -73,5 +73,25 @@ namespace RoomPals
                 this.Close();
             }
         }
+
+        private void toButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void subjectButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void textButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void sendButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
