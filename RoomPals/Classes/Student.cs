@@ -33,7 +33,7 @@ namespace RoomPals.Classes
 
         // Regex patterns
         string pattern_email = @"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$";
-        string pattern_password = @"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,16}$"; //requirements: password must contain: min 1 uppercase letter, min 1 lowercase letter, min 1 digit 
+        string pattern_password = @"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,30}$"; //requirements: password must contain: min 1 uppercase letter, min 1 lowercase letter, min 1 digit 
 
 
         // Constructor to initialize student object (only basic info required for sign up)

@@ -124,9 +124,9 @@ namespace RoomPals
                 return;
             }
 
-            if (!Regex.IsMatch(enteredPassword, @"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,16}$"))
+            if (!Regex.IsMatch(enteredPassword, @"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,30}$"))
             {
-                MessageBox.Show("Password must be 8-16 characters long, with at least one uppercase letter, one lowercase letter, and one number.");
+                MessageBox.Show("Password must be 8-30 characters long, with at least one uppercase letter, one lowercase letter, and one number.");
                 return;
             }
 
@@ -174,7 +174,7 @@ namespace RoomPals
 
         private bool IsValidPassword(string password)
         {
-            string pattern_password = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d).{8,16}$";  //requirements: password must contain: min 1 uppercase letter, min 1 lowercase letter, min 1 digit 
+            string pattern_password = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d).{8,30}$";  //requirements: password must contain: min 1 uppercase letter, min 1 lowercase letter, min 1 digit 
             return Regex.IsMatch(password, pattern_password);
         }
 
