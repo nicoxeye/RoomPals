@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DotNetEnv;
 
 namespace RoomPals
 {
@@ -33,7 +36,8 @@ namespace RoomPals
             InitializeComponent();
             _loggedInStudent = loggedInStudent;
             isViewingMatches=false;
-    }
+            Env.Load();
+        }
         public ChatroomWindow(Student loggedInStudent, List<Student> allStudents, List<Student> acceptedMatches, int currentMatchIndex)
         {
             InitializeComponent();
@@ -72,6 +76,74 @@ namespace RoomPals
                 startWindow.Show();
                 this.Close();
             }
+        }
+
+        private void toButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void subjectButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void textButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private async void sendButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (string.IsNullOrWhiteSpace(toTextBox.Text) ||
+                string.IsNullOrWhiteSpace(subjectTextBox.Text) ||
+                string.IsNullOrWhiteSpace(textTextBox.Text))
+            {
+                MessageBox.Show("Please fill in all the fields before sending the email.");
+                return;
+            }
+
+            try
+            {
+                var fromAddress = new MailAddress(_loggedInStudent.Email);
+                var toAddress = new MailAddress(toTextBox.Text);
+                string subject = subjectTextBox.Text;
+                string body = textTextBox.Text;
+
+                var smtpClient = new SmtpClient("sandbox.smtp.mailtrap.io", 465)
+                {
+                    Credentials = new NetworkCredential(
+                        Environment.GetEnvironmentVariable("MAILTRAP_USERNAME"),
+                        Environment.GetEnvironmentVariable("MAILTRAP_PASSWORD")
+                        ),
+                    EnableSsl = true
+                };
+
+                using (var message = new MailMessage(fromAddress, toAddress)
+                {
+                    Subject = subject,
+                    Body = body
+                })
+                {
+                    await smtpClient.SendMailAsync(message);
+                }
+
+                MessageBox.Show("Email sent successfully!");
+            }
+            catch (SmtpException smtpEx)
+            {
+                MessageBox.Show($"SMTP error sending email: {smtpEx.Message}");
+            }
+            catch (FormatException formatEx)
+            {
+                MessageBox.Show($"Invalid email format: {formatEx.Message}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error sending email: {ex.Message}");
+            }
+
         }
     }
 }
