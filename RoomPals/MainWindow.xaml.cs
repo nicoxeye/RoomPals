@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using RoomPals;
 
 namespace RoomPals
 {
@@ -19,6 +20,20 @@ namespace RoomPals
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Log_in_Click(object sender, RoutedEventArgs e)
+        {
+            LogInWindow logInWindow = new LogInWindow();
+            logInWindow.Show();
+            this.Close();
+        }
+
+        private void Sign_up_Click(object sender, RoutedEventArgs e)
+        {
+            SignInWindow signInWindow = new SignInWindow();
+            signInWindow.Show();
+            this.Close();
         }
     }
 }

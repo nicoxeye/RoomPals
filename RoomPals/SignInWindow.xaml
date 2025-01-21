@@ -1,0 +1,136 @@
+﻿<Window x:Class="RoomPals.SignInWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RoomPals"
+        mc:Ignorable="d"
+        Title="SignInWindow" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Window.Background>
+        <ImageBrush ImageSource="pack://application:,,,/Images/registration.png"/>
+    </Window.Background>
+
+    <Frame x:Name="RegistrationFrame" NavigationUIVisibility="Hidden">
+        <Frame.Content>
+            <Grid RenderTransformOrigin="0.496,0.501" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90*"/>
+                    <ColumnDefinition Width="90*"/>
+                    <ColumnDefinition Width="115*"/>
+                    <ColumnDefinition Width="98*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="379*"/>
+                    <RowDefinition Height="60*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="60*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="60*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="60*"/>
+                    <RowDefinition Height="35*"/>
+                    <RowDefinition Height="45*"/>
+                    <RowDefinition Height="62*"/>
+                </Grid.RowDefinitions>
+
+                <Button Name="go_back"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" Height="20" Width="30" 
+                Style="{StaticResource RoundedTransparentButtonStyle}"
+                Margin="5,0,0,0"
+                Click="go_back_Click"/>
+
+                <!-- Email button -->
+                <Button Name="Email"
+                        Grid.ColumnSpan="4" 
+                        Grid.Row="1"
+                        Margin="20,0,18,0"
+                        Click="Email_Click"
+                        Style="{StaticResource RoundedTransparentButtonStyle}" 
+                        Height="60"/>
+
+                <TextBox Name="EmailTextBox" 
+                         Grid.Row="1"
+                         Grid.ColumnSpan="2"
+                         Grid.Column="2"
+                         Margin="0,10,26,12"
+                         Style="{StaticResource RoundedTransparentTextBoxStyle}"
+                         Visibility="Collapsed"
+                         KeyDown="EmailTextBoxKeyDown"
+                         />
+
+                <!-- Username button -->
+                <Button Name="Username"
+                        Grid.Row="2"
+                        Click="Username_Click"
+                        Margin="20,25,18,5"
+                        Grid.ColumnSpan="4"
+                        Style="{StaticResource RoundedTransparentButtonStyle}" 
+                        Grid.RowSpan="2"/>
+
+                <TextBox Name="UsernameTextBox" 
+                         Grid.Row="3"
+                         Grid.Column="2"
+                         Grid.ColumnSpan="2"
+                         Margin="0,7,30,16"
+                         Visibility="Collapsed"
+                         Style="{StaticResource RoundedTransparentTextBoxStyle}"
+                         KeyDown="UsernameTextBoxKeyDown"/>
+
+                <!-- Password button -->
+                <Button Name="Password"
+                        Grid.Row="4"
+                        Click="Password_Click"
+                        Margin="20,25,18,5"
+                        Grid.ColumnSpan="4"
+                        Style="{StaticResource RoundedTransparentButtonStyle}" 
+                        Grid.RowSpan="2"/>
+
+                <PasswordBox Name="PasswordBox" 
+                         Grid.Row="5"
+                         Grid.Column="2"
+                         Grid.ColumnSpan="2"
+                         Margin="0,8,25,15"
+                         Visibility="Collapsed"
+                         Style="{StaticResource RoundedTransparentPasswordBoxStyle}"
+                         KeyDown="PasswordBoxKeyDown"/>
+
+                <!-- Repeat Password button -->
+                <Button Name="RepeatPassword"
+                        Grid.Row="6"
+                        Click="RepeatPassword_Click"
+                        Margin="20,25,18,5"
+                        Grid.ColumnSpan="4"
+                        Style="{StaticResource RoundedTransparentButtonStyle}" 
+                        Grid.RowSpan="2"/>
+
+                <PasswordBox Name="RepeatPasswordBox" 
+                         Grid.Row="7"
+                         Grid.Column="2"
+                         Grid.ColumnSpan="2"
+                         Margin="10,10,50,23"
+                         Visibility="Visible"
+                         Style="{StaticResource RoundedTransparentPasswordBoxStyle}"
+                         KeyDown="RepeatPasswordBoxKeyDown"/>
+
+                <!-- tu trzeba zrobic ze jak uzytkownik kliknie enter to tworzy sie konto i zapisuja sie dane do bazy danych -->
+                <!-- Create Account button -->
+                <Button Name="CreateAccount"
+                        Grid.Row="8"
+                        Click="CreateAccount_Click" 
+                        Grid.ColumnSpan="2"
+                        Margin="0,35,5,3"
+                        Style="{StaticResource RoundedTransparentButtonStyle}" 
+                        Grid.Column="1" 
+                        Grid.RowSpan="2"
+                       
+                       />
+
+
+
+            </Grid>
+        </Frame.Content>
+    </Frame>
+
+</Window>

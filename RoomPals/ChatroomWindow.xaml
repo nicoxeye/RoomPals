@@ -1,0 +1,73 @@
+﻿<Window x:Class="RoomPals.ChatroomWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RoomPals"
+        mc:Ignorable="d"
+        Title="ChatroomWindow" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="Images\mail.png" Stretch="Fill"/>
+    </Window.Background>
+    <Grid>
+        <Button Name="go_back"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" Height="19" Width="43" 
+                Style="{StaticResource RoundedTransparentButtonStyle}"
+                Click="go_back_Click"/>
+
+        <TextBox Name="toTextBox"
+                 Margin="35,215,69,0"
+                 FontSize="17"
+                 FontFamily="Century Gothic"
+                 VerticalAlignment="Top"
+                 Height="32"
+                 Style="{StaticResource RoundedTransparentTextBoxStyle}"
+                 Foreground="White"
+                 Visibility="Visible"/>
+
+        <Button Name="toButton"
+                Margin="35,215,69,589"                                              
+                Style="{StaticResource RoundedTransparentButtonStyle}"
+                Click="toButton_Click" />
+
+
+        <TextBox Name="subjectTextBox"
+                 Margin="77,257,57,0"
+                 FontSize="17"
+                 FontFamily="Century Gothic"
+                 VerticalAlignment="Top"
+                 Height="32"
+                 Style="{StaticResource RoundedTransparentTextBoxStyle}"
+                 Foreground="White"
+                 Visibility="Visible"/>
+
+        <Button Name="subjectButton"
+                Margin="77,257,57,547"                                              
+                Style="{StaticResource RoundedTransparentButtonStyle}"
+                Click="subjectButton_Click" />
+
+
+        <TextBox Name="textTextBox"
+                 Margin="46,334,46,0"
+                 FontSize="17"
+                 FontFamily="Century Gothic"
+                 VerticalAlignment="Top"
+                 Height="384"
+                 Style="{StaticResource RoundedTransparentTextBoxStyle}"
+                 Foreground="White"
+                 Visibility="Visible" TextWrapping="Wrap"/>
+
+        <Button Name="textButton"
+                Margin="46,334,57,466"                                              
+                Style="{StaticResource RoundedTransparentButtonStyle}"
+                Click="textButton_Click" />
+
+        <Button Name="sendButton"
+                Margin="254,732,38,69"                                              
+                Style="{StaticResource RoundedTransparentButtonStyle}"
+                Click="sendButton_Click" />
+
+
+    </Grid>
+</Window>

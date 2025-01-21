@@ -1,0 +1,78 @@
+﻿<Window x:Class="RoomPals.QuizWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RoomPals"
+        mc:Ignorable="d"
+        Title="QuizWindow" Height="852" Width="393" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="pack://application:,,,/Images/new_quiz.png"/>
+    </Window.Background>
+    <Grid>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" 
+            VerticalAlignment="Top" Margin="52,199,0,0" Width="372">
+            <RadioButton Name="Night" GroupName="NightOrDay" Click="NightOrDay_Click" Width="243" Height="20" >
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="2.5" ScaleY="2.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+            <RadioButton Name="Day" GroupName="NightOrDay" Click="NightOrDay_Click" Width="20" Height="20">
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="2.5" ScaleY="2.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" 
+    VerticalAlignment="Top" Margin="52,331,0,0" Width="372">
+            <RadioButton Name="Dog" GroupName="DogOrCat" Click="DogOrCat_Click" Width="243" Height="20" >
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="2.5" ScaleY="2.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+            <RadioButton Name="Cat" GroupName="DogOrCat" Click="DogOrCat_Click" Width="20" Height="20">
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="2.5" ScaleY="2.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" Margin="49,454,0,0" Width="372">
+            <RadioButton Name="Party" GroupName="PartyOrBook" Click="PartyOrBook_Click" Width="243" Height="20" >
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="2.5" ScaleY="2.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+            <RadioButton Name="Book" GroupName="PartyOrBook" Click="PartyOrBook_Click" Width="20" Height="20">
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="2.5" ScaleY="2.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" 
+             VerticalAlignment="Top" Margin="49,589,0,0" Width="372">
+            <RadioButton Name="Active" GroupName="ActiveOrPassive" Click="ActiveOrPassive_Click" Width="243" Height="20" >
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="2.5" ScaleY="2.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+            <RadioButton Name="Passive" GroupName="ActiveOrPassive" Click="ActiveOrPassive_Click" Width="20" Height="20">
+                <RadioButton.RenderTransform>
+                    <ScaleTransform ScaleX="2.5" ScaleY="2.5" />
+                </RadioButton.RenderTransform>
+            </RadioButton>
+        </StackPanel>
+
+        <Button Name="ConfirmYourChoiceButton" 
+                        HorizontalAlignment="Left"  
+                        VerticalAlignment="Top" Height="52" Width="137" 
+                        Style="{StaticResource RoundedTransparentButtonStyle}" 
+                        Margin="139,704,0,0"
+                        Click="ConfirmYourChoiceButton_Click" />
+
+    </Grid>
+</Window>
